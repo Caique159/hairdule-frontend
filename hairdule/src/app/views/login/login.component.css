@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+:root{
+  --cor-azul-hairdule:#22D4FD;
+  --cor-letras-preto:#020202;
+}
+
+body{
+  background-color: #F2F2F7;
+}
+
+.lista_azul_cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.25rem;
+    height: 145px;
+    width: 100%;
+    background-color: #22D4FD;
+    color: #020202;
+}
+
+.hairdule-boasvindas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+
+}
+ .boas-vindas{
+  font-size: 1.25rem;
+  margin-top: 30px;
+ }
+
+.Login{
+  background-color: #FFFFFF;
+  margin-top: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 8px;
+  height: 110px;
+}
+
+.Login__Card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Login__Dividir{
+  background-color: #89898B;
+}
+
+.Login__Usuario{
+  color: #89898B;
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  border: 0;
+  width: 99%;
+  margin: 5px;
+}
+
+.Login__Senha__Icon{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.Icon__Senha{
+  background-color: #F2F2F7;
+  color: #89898B;
+  border: 0;
+}
+
+.Icone__Senha{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F2F2F7;
+  color: #89898B;
+  border: 0;
+}
+
+.Login__Senha{
+  color: #89898B;
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  width: 100%;
+  border: 0;
+  margin: 5px;
+}
+
+.Botoes{
+  margin-top: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 8px;
+}
+
+.Botao__Cadastre-se__Entrar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Botao__Cadastre-se{
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 22px;
+  background-color: #BDF3FC;
+  color: #020202;
+  width: 170px;
+}
+
+.Botao__Entrar{
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 22px;
+  background-color: #BDF3FC;
+  color: #020202;
+  width: 170px;
+}
+
+.Botao__Recuperar__Senha{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  margin-left: 25px;
+  margin-right: 25px;
+  border-radius: 8px;
+}
+
+.Recuperar__Senha{
+  color: #020202;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 22px;
+}
