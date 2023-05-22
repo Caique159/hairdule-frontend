@@ -1,7 +1,7 @@
 {
   "name": "hairdule",
   "short_name": "hairdule",
-  "theme_color": "#1976d2",
+  "theme_color": "#22D4FD",
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "./",
