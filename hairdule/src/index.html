@@ -1,45 +1,16 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <link rel="canonical" href="https://hairdule-frontend-rv6d.vercel.app/">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="Hairdule">
-  <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
-  <link rel="manifest" href="manifest.json"/>
-
   <meta charset="utf-8">
   <title>Hairdule</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="manifest" href="manifest.webmanifest">
-  <meta name="theme-color" content="#1976d2">
 </head>
 <body class="mat-typography">
-
-  <script>
-    // Check compatibility for the browser we're running this in
-    if ("serviceWorker" in navigator) {
-     if (navigator.serviceWorker.controller) {
-     console.log("[PWA Builder] active service worker found, no need to register");
-     } else {
-     // Register the service worker
-     navigator.serviceWorker
-     .register("pwabuilder-sw.js", {
-     scope: "./"
-     })
-     .then(function (reg) {
-     console.log("[PWA Builder] Service worker has been registered for scope: " + reg.scope);
-     });
-     }
-    }
-  </script>
-
   <app-root></app-root>
-  <noscript>Please enable JavaScript to continue using this application.</noscript>
 </body>
 </html>
