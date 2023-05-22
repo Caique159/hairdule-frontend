@@ -1,8 +1,8 @@
 {
-  "name": "AluraBooks",
-  "short_name": "AluraBooks",
+  "name": "Hairdule",
+  "short_name": "Hairdule",
   "theme_color": "#ff0000",
-  "background_color": "#ff0000",
+  "background_color": "#22D4FD",
   "display": "standalone",
   "Scope": "/index.html",
   "start_url": "/",
