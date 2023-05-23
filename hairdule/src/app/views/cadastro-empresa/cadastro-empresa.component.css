@@ -4,6 +4,11 @@ body{
   background-color: #F2F2F7;
 }
 
+*{
+  margin: 0;
+  padding: 0;
+}
+
 .lista_azul_cabecalho {
   display: flex;
   align-items: center;
@@ -203,6 +208,7 @@ hr.Linha__Divisoria{
   margin-left: 10px;
   margin-right: 10px;
   border-radius: 8px;
+  margin-bottom: 10px;
 }
 
 .Botao__Cadastrar__Cancelar{
