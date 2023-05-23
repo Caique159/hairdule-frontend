@@ -39,7 +39,7 @@ body{
   margin-left: 10px;
   margin-right: 10px;
   border-radius: 8px;
-  height: 110px;
+  height: 135px;
 }
 
 .Login__Card{
@@ -60,7 +60,8 @@ body{
   font-size: 1.25rem;
   border: 0;
   width: 99%;
-  margin: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .Login__Senha__Icon{
@@ -94,7 +95,8 @@ body{
   font-size: 1.25rem;
   width: 99%;
   border: 0;
-  margin: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .Botoes{
