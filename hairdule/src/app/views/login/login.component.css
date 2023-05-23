@@ -39,7 +39,7 @@ body{
   margin-left: 10px;
   margin-right: 10px;
   border-radius: 8px;
-  height: 12%;
+  height: 110px;
 }
 
 .Login__Card{
@@ -57,7 +57,7 @@ body{
   font-family: 'Open Sans', sans-serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 1.25rem;
   border: 0;
   width: 99%;
   margin: 5px;
@@ -68,6 +68,7 @@ body{
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  margin-right: 3px;
 }
 
 .Icon__Senha{
@@ -90,8 +91,8 @@ body{
   font-family: 'Open Sans', sans-serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 20px;
-  width: 100%;
+  font-size: 1.25rem;
+  width: 99%;
   border: 0;
   margin: 5px;
 }
