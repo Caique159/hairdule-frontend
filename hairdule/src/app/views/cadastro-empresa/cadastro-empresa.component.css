@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+body{
+  background-color: #F2F2F7;
+}
+
+.lista_azul_cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.25rem;
+  height: 145px;
+  width: 100%;
+  background-color: #22D4FD;
+  color: #020202;
+}
+
+.hairdule-cadastro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.Cadastro{
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 22px;
+
+}
+ .Preencher__Dados{
+  font-size: 1.25rem;
+  margin-top: 30px;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 20px;
+ }
+
+ .Dados__Cadastro{
+  background-color: #FFFFFF;
+  margin-top: 10px;
+}
+
+.Dados__Cadastro__Card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 8px;
+}
+
+.Formatacao__Campos__Cadastro{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-right: 3px;
+}
+
+hr.Linha__Divisoria{
+  width: 95%;
+  background-color: #89898B;
+}
+
+.CNPJ__Empresa{
+  color: #89898B;
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.25rem;
+  border: 0;
+  width: 99%;
+  margin: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.Nome__Empresa{
+  color: #89898B;
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.25rem;
+  border: 0;
+  width: 99%;
+  margin: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.Telefone__Empresa{
+  color: #89898B;
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.25rem;
+  border: 0;
+  width: 99%;
+  margin: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.Rua__Empresa{
+  color: #89898B;
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.25rem;
+  border: 0;
+  width: 99%;
+  margin: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.Bairro__Empresa{
+  color: #89898B;
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.25rem;
+  border: 0;
+  width: 99%;
+  margin: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.Estado__Empresa{
+  color: #89898B;
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.25rem;
+  border: 0;
+  width: 99%;
+  margin: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.Numero__Empresa{
+  color: #89898B;
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.25rem;
+  border: 0;
+  width: 99%;
+  margin: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.Email__Empresa{
+  color: #89898B;
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.25rem;
+  border: 0;
+  width: 99%;
+  margin: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.Senha__Empresa{
+  color: #89898B;
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.25rem;
+  border: 0;
+  width: 99%;
+  margin: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.Confirmacao__Senha__Empresa{
+  color: #89898B;
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.25rem;
+  border: 0;
+  width: 99%;
+  margin: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.Botoes{
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 8px;
+}
+
+.Botao__Cadastrar__Cancelar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Botao__Cadastrar{
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 22px;
+  background-color: #BDF3FC;
+  color: #020202;
+  width: 170px;
+}
+
+.Botao__Cancelar{
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 22px;
+  background-color: #BDF3FC;
+  color: #020202;
+  width: 170px;
+}

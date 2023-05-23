@@ -28,6 +28,14 @@ body{
   margin-top: 40px;
 
 }
+
+.hairdule{
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 22px;
+}
+
  .boas-vindas{
   font-size: 1.25rem;
   margin-top: 30px;
