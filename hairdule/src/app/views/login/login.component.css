@@ -50,7 +50,8 @@ body{
   border-radius: 8px;
 }
 
-.Login__Dividir{
+hr.Login__Dividir{
+  width: 95%;
   background-color: #89898B;
 }
 
