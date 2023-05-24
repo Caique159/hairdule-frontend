@@ -1,26 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 
 body{
-  background-color: #F2F2F7;
+  background-color: var(--cor-fundo-pagina);
 }
 
-*{
-  margin: 0;
-  padding: 0;
-}
-
-.lista_azul_cabecalho {
+.lista__azul__cabecalho {
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 2.25rem;
   height: 145px;
   width: 100%;
-  background-color: #22D4FD;
-  color: #020202;
+  background-color: (--cor-azul-hairdule);
+  color: var(--cor-letras-preto);
 }
 
-.hairdule-cadastro {
+.hairdule__cadastro {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,7 +30,7 @@ body{
   line-height: 22px;
 
 }
- .Preencher__Dados{
+ .preencher__dados__cadastroEmpresa{
   font-size: 1.25rem;
   margin-top: 30px;
   font-style: normal;
@@ -43,16 +38,16 @@ body{
   line-height: 20px;
  }
 
- .Dados__Cadastro{
-  background-color: #FFFFFF;
+ .cadastroEmpresa__campos{
+  background-color: var(--cor-branco-cards);
   margin-top: 10px;
 }
 
-.Dados__Cadastro__Card{
+.cadastroEmpresa__card{
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #FFFFFF;
+  background-color: var(--cor-branco-cards);
   border-radius: 8px;
   margin-top: 20px;
   margin-left: 10px;
@@ -60,7 +55,7 @@ body{
   border-radius: 8px;
 }
 
-.Formatacao__Campos__Cadastro{
+.formatacao__campos__cadastroEmpresa{
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -68,14 +63,14 @@ body{
   margin-right: 3px;
 }
 
-hr.Linha__Divisoria{
+hr.linha__divisoria__cadastroEmpresa{
   width: 95%;
-  background-color: #89898B;
+  background-color: var(-cor-cinza-letras);
 }
 
-.CNPJ__Empresa{
-  color: #89898B;
-  font-family: 'Open Sans', sans-serif;
+.cnpj__cadastroEmpresa{
+  color: var(-cor-cinza-letras);
+  font-family: var(--fonte-principal);
   font-style: normal;
   font-weight: 600;
   font-size: 1.25rem;
@@ -86,9 +81,9 @@ hr.Linha__Divisoria{
   margin-bottom: 10px;
 }
 
-.Nome__Empresa{
-  color: #89898B;
-  font-family: 'Open Sans', sans-serif;
+.nome__cadastroEmpresa{
+  color: var(-cor-cinza-letras);
+  font-family: var(--fonte-principal);
   font-style: normal;
   font-weight: 600;
   font-size: 1.25rem;
@@ -99,9 +94,9 @@ hr.Linha__Divisoria{
   margin-bottom: 10px;
 }
 
-.Telefone__Empresa{
-  color: #89898B;
-  font-family: 'Open Sans', sans-serif;
+.telefone__cadastroEmpresa{
+  color: var(-cor-cinza-letras);
+  font-family: var(--fonte-principal);
   font-style: normal;
   font-weight: 600;
   font-size: 1.25rem;
@@ -112,9 +107,9 @@ hr.Linha__Divisoria{
   margin-bottom: 10px;
 }
 
-.Rua__Empresa{
-  color: #89898B;
-  font-family: 'Open Sans', sans-serif;
+.rua__cadastroEmpresa{
+  color: var(-cor-cinza-letras);
+  font-family: var(--fonte-principal);
   font-style: normal;
   font-weight: 600;
   font-size: 1.25rem;
@@ -125,9 +120,9 @@ hr.Linha__Divisoria{
   margin-bottom: 10px;
 }
 
-.Bairro__Empresa{
-  color: #89898B;
-  font-family: 'Open Sans', sans-serif;
+.bairro__cadastroEmpresa{
+  color: var(-cor-cinza-letras);
+  font-family: var(--fonte-principal);
   font-style: normal;
   font-weight: 600;
   font-size: 1.25rem;
@@ -138,9 +133,9 @@ hr.Linha__Divisoria{
   margin-bottom: 10px;
 }
 
-.Estado__Empresa{
-  color: #89898B;
-  font-family: 'Open Sans', sans-serif;
+.estado__cadastroEmpresa{
+  color: var(-cor-cinza-letras);
+  font-family: var(--fonte-principal);
   font-style: normal;
   font-weight: 600;
   font-size: 1.25rem;
@@ -151,9 +146,9 @@ hr.Linha__Divisoria{
   margin-bottom: 10px;
 }
 
-.Numero__Empresa{
-  color: #89898B;
-  font-family: 'Open Sans', sans-serif;
+.numero__cadastroEmpresa{
+  color: var(-cor-cinza-letras);
+  font-family: var(--fonte-principal);
   font-style: normal;
   font-weight: 600;
   font-size: 1.25rem;
@@ -164,9 +159,9 @@ hr.Linha__Divisoria{
   margin-bottom: 10px;
 }
 
-.Email__Empresa{
-  color: #89898B;
-  font-family: 'Open Sans', sans-serif;
+.email__cadastroEmpresa{
+  color: var(-cor-cinza-letras);
+  font-family: var(--fonte-principal);
   font-style: normal;
   font-weight: 600;
   font-size: 1.25rem;
@@ -177,9 +172,9 @@ hr.Linha__Divisoria{
   margin-bottom: 10px;
 }
 
-.Senha__Empresa{
-  color: #89898B;
-  font-family: 'Open Sans', sans-serif;
+.senha__cadastroEmpresa{
+  color: var(-cor-cinza-letras);
+  font-family: var(--fonte-principal);
   font-style: normal;
   font-weight: 600;
   font-size: 1.25rem;
@@ -190,9 +185,9 @@ hr.Linha__Divisoria{
   margin-bottom: 10px;
 }
 
-.Confirmacao__Senha__Empresa{
-  color: #89898B;
-  font-family: 'Open Sans', sans-serif;
+.confirmacao__senha__cadastroEmpresa{
+  color: var(-cor-cinza-letras);
+  font-family: var(--fonte-principal);
   font-style: normal;
   font-weight: 600;
   font-size: 1.25rem;
@@ -203,7 +198,7 @@ hr.Linha__Divisoria{
   margin-bottom: 10px;
 }
 
-.Botoes{
+.botoes__cadastroEmpresa{
   margin-top: 20px;
   margin-left: 10px;
   margin-right: 10px;
@@ -211,30 +206,30 @@ hr.Linha__Divisoria{
   margin-bottom: 10px;
 }
 
-.Botao__Cadastrar__Cancelar{
+.botao__cadastrar__cancelar__cadastroEmpresa{
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.Botao__Cadastrar{
-  font-family: 'Open Sans', sans-serif;
+.botao__cancelar__cadastroEmpresa{
+  font-family: var(--fonte-principal);
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 22px;
-  background-color: #BDF3FC;
-  color: #020202;
+  background-color: var(--cor-azulclaro-botao);
+  color: var(--cor-letras-preto);
   width: 170px;
 }
 
-.Botao__Cancelar{
-  font-family: 'Open Sans', sans-serif;
+.botao__cadastrar__cadastroEmpresa{
+  font-family: var(--fonte-principal);
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 22px;
-  background-color: #BDF3FC;
-  color: #020202;
+  background-color: var(--cor-azulclaro-botao);
+  color: var(--cor-letras-preto);
   width: 170px;
 }

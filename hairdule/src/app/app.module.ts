@@ -14,13 +14,15 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { CadastroEmpresa } from './views/cadastro-empresa/cadastro-empresa.component';
+import { RecuperarSenhaComponent } from './views/recuperar-senha/recuperar-senha.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
-    CadastroEmpresa
+    CadastroEmpresa,
+    RecuperarSenhaComponent
   ],
   imports: [
     BrowserModule,

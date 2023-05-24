@@ -1,4 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("app/views/login/login.component.css");
+@import url("app/views/recuperar-senha/recuperar-senha.component.css");
+
+:root{
+  --cor-azul-hairdule:#22D4FD;
+  --cor-letras-preto:#020202;
+  --cor-fundo-pagina:#F2F2F7;
+  --cor-branco-cards:#FFFFFF;
+  --cor-cinza-letras:#89898B;
+  --cor-azulclaro-botao:#BDF3FC;
+  --fonte-principal: 'Open Sans', sans-serif;
+
+}
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
