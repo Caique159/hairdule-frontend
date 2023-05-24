@@ -9,7 +9,7 @@ body{
   align-items: center;
   justify-content: center;
   font-size: 2.25rem;
-  height: 145px;
+  height: 100px;
   width: 100%;
   background-color: (--cor-azul-hairdule);
   color: var(--cor-letras-preto);
@@ -20,7 +20,7 @@ body{
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  margin-top: 40px;
+  margin-top: 10px;
 }
 
 .Cadastro{
