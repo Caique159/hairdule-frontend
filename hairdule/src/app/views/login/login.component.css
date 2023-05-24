@@ -137,7 +137,7 @@ hr.Login__Dividir{
   border-radius: 8px;
 }
 
-.Recuperar__Senha{
+.botao__recuperar__senha__login{
   color: var(--cor-letras-preto);
   text-decoration: none;
   font-family: var(--fonte-principal);
