@@ -15,6 +15,9 @@ import {MatInputModule} from '@angular/material/input';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { CadastroEmpresa } from './views/cadastro-empresa/cadastro-empresa.component';
 import { RecuperarSenhaComponent } from './views/recuperar-senha/recuperar-senha.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -39,9 +42,14 @@ import { RecuperarSenhaComponent } from './views/recuperar-senha/recuperar-senha
       // Register the ServiceWorker as soon as the application is stable
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
-    })
+    }),
+    ReactiveFormsModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+ }

@@ -15,15 +15,15 @@
      </div>
    </section>
 
-
+   <form [formGroup]="loginForm" (ngSubmit)="enviarCamposLogin()">
    <span class="preencher__login">
     <span class="preencher__login__card">
       <span class="formatacao__campos__login">
-        <input type="text" class="campo__usuario__login" placeholder="E-mail">
+        <input type="text" class="campo__usuario__login" placeholder="E-mail" formControlName="loginUsuario" >
       </span>
         <hr class="Login__Dividir" size="1" align="center">
       <span class="formatacao__campos__login">
-        <input type="password" class="campo__senha__login" placeholder="Senha">
+        <input type="password" class="campo__senha__login" placeholder="Senha" formControlName="senhaUsuario">
     </span>
     </span>
   </span>
@@ -33,7 +33,7 @@
       <button class="botao__cadastrese__login" routerLink="/cadastroEmpresa" mat-fab extended>
         Cadastre-se
       </button>
-      <button class="botao__entrar__login" mat-fab extended>
+      <button class="botao__entrar__login" mat-fab extended [disabled]="loginForm.invalid">
         Entrar
       </button>
     </div>
@@ -43,5 +43,6 @@
     </div>
 
   </section>
+  </form>
 </body>
 </html>
