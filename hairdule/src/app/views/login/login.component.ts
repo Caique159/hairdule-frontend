@@ -4,6 +4,7 @@ import { Usuario } from 'src/app/shared/models/usuario';
 import { HairduleService } from 'src/app/shared/service/hairduleLogin.service';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import { Router } from '@angular/router';
+import { AutenticacaoService } from 'src/app/shared/service/autenticacao/autenticacao.service';
 
 @Component({
   selector: 'app-login',
@@ -36,7 +37,8 @@ export class LoginComponent {
   constructor(
     private fb: FormBuilder,
     private HairduleService: HairduleService,
-    private router: Router
+    private router: Router,
+    private autenticar: AutenticacaoService
   ){
   }
 
@@ -65,6 +67,8 @@ export class LoginComponent {
               //res[0].idIdentificacaoUsuario
               this.mensagem = "Usuario ou senha invalidos"
             }else{
+              this.autenticar.login()
+              console.log(this.autenticar.verificarSeEstaLogado)
               this.mensagem = "Login com sucesso"
               this.router.navigate(['/homeEmpresa']);
             }

@@ -7,13 +7,22 @@ import { Usuario } from '../../models/usuario';
 })
 export class AutenticacaoService {
 
-  constructor(private usuario: Usuario){}
+  constructor(){}
 
-  isAuthenticated(): boolean {
-    if (this.usuario.id_Do_Usuario){
-      return true
-    }else {
-      return false
-    }
+  private isAuthenticated = false;
+
+  login() {
+    // Lógica de autenticação
+    this.isAuthenticated = true;
+  }
+
+  logout() {
+    // Lógica de logout
+    this.isAuthenticated = false;
+  }
+
+  verificarSeEstaLogado(): boolean {
+    return this.isAuthenticated;
+
   }
 }
