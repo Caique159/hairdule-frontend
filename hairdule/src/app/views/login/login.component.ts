@@ -69,6 +69,8 @@ export class LoginComponent {
           }
         }
       )
+    }else {
+      alert("Falha ao efetuar login")
     }
   }
 

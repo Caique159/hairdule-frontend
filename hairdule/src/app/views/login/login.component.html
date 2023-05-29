@@ -15,7 +15,7 @@
      </div>
    </section>
 
-   <form [formGroup]="loginForm" (ngSubmit)="enviarCamposLogin()">
+   <form [formGroup]="loginForm">
    <span class="preencher__login">
     <span class="preencher__login__card">
       <span class="formatacao__campos__login">
@@ -36,15 +36,13 @@
       <button class="botao__cadastrese__login" routerLink="/cadastroEmpresa" mat-fab extended>
         Cadastre-se
       </button>
-      <button class="botao__entrar__login" mat-fab extended>
+      <button class="botao__entrar__login" mat-fab extended (click)="enviarCamposLogin()">
         Entrar
       </button>
     </div>
-
     <div class="recuperar__senha__login">
       <a class="botao__recuperar__senha__login"  routerLink="/recuperarSenha" >Recuperar Senha</a>
     </div>
-
   </section>
   </form>
 </body>
