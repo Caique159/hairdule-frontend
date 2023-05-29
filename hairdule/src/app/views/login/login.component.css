@@ -92,6 +92,14 @@ hr.Login__Dividir{
   margin-bottom: 10px;
 }
 
+.botao__mostrar__senha{
+  background-color: var(--cor-branco-cards);
+  color: var(--cor-cinza-letras);
+  border: 0;
+  margin-right: 5px;
+  font-size: 18px;
+}
+
 .botoes__login{
   margin-top: 30px;
   margin-left: 10px;

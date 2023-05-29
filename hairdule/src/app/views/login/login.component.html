@@ -23,8 +23,11 @@
       </span>
         <hr class="Login__Dividir" size="1" align="center">
       <span class="formatacao__campos__login">
-        <input type="password" class="campo__senha__login" placeholder="Senha" formControlName="senhaUsuario">
-    </span>
+        <input type="{{ mostrarSenha ? 'text' : 'password' }}" class="campo__senha__login" placeholder="Senha" formControlName="senhaUsuario">
+        <button class="botao__mostrar__senha" (click)="toggleMostrarSenha()">
+          <i class="fas {{ mostrarSenha ? 'fa-eye-slash' : 'fa-eye' }}"></i>
+        </button>
+      </span>
     </span>
   </span>
 
@@ -33,7 +36,7 @@
       <button class="botao__cadastrese__login" routerLink="/cadastroEmpresa" mat-fab extended>
         Cadastre-se
       </button>
-      <button class="botao__entrar__login" mat-fab extended [disabled]="loginForm.invalid">
+      <button class="botao__entrar__login" mat-fab extended>
         Entrar
       </button>
     </div>

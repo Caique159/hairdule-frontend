@@ -1,0 +1,17 @@
+{
+  "name": "Hairdule",
+  "short_name": "Hairdule",
+  "theme_color": "#000000",
+  "background_color": "#000000",
+  "display": "standalone",
+  "Scope": "/index.html",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "src/img/icone1x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "splash_pages": null
+}

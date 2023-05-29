@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "hairdule": {
+    "hairdule-frontend": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/hairdule",
+            "outputPath": "dist/hairdule-frontend",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -21,18 +21,14 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
-              "src/assets",
-              "src/manifest.webmanifest"
+              "src/favicon-16x16.png",
+              "src/assets"
             ],
             "styles": [
-              "@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.css",
-              "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+              "@angular/material/prebuilt-themes/pink-bluegrey.css",
+              "src/styles.css"
             ],
-            "scripts": [],
-            "serviceWorker": true,
-            "ngswConfigPath": "ngsw-config.json"
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -65,10 +61,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "hairdule:build:production"
+              "browserTarget": "hairdule-frontend:build:production"
             },
             "development": {
-              "browserTarget": "hairdule:build:development"
+              "browserTarget": "hairdule-frontend:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +72,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "hairdule:build"
+            "browserTarget": "hairdule-frontend:build"
           }
         },
         "test": {
@@ -88,17 +84,12 @@
             ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
-              "src/favicon.ico",
-              "src/assets",
-              "src/manifest.webmanifest",
-              "src/manifest.webmanifest",
-              "src/manifest.webmanifest",
-              "src/manifest.webmanifest"
+              "src/favicon-16x16.png",
+              "src/assets"
             ],
             "styles": [
-              "@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.css",
-              "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+              "@angular/material/prebuilt-themes/pink-bluegrey.css",
+              "src/styles.css"
             ],
             "scripts": []
           }
@@ -107,6 +98,6 @@
     }
   },
   "cli": {
-    "analytics": "f40a7f06-86e2-4070-9645-1dc0eccf70a0"
+    "analytics": "fe6db2a2-f3d0-436a-a968-23ef2c2dacc1"
   }
 }

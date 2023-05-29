@@ -1,0 +1,36 @@
+.example-spacer {
+  flex : 0.5 1 auto;
+}
+
+.menu__Principal{
+  padding: 5%;
+  background-color: black;
+  color: aliceblue;
+  font-family: Marker Felt, fantasy;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.sub__Titulo{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.0rem;
+  background-color: transparent;
+  text-align: center;
+  border: 2px solid gray;
+  color: aliceblue;
+}
+
+.banner {
+  background: transparent;
+  text-align: center;
+}
+
+.banner__pesquisa{
+  background-color: transparent;
+  border: 0.3rem solid #168a9d;
+  color: #a6a6a6;
+  border-radius: 1.5rem;
+  padding: 1em;
+  width: 90%;
+  margin: 5%;
+}

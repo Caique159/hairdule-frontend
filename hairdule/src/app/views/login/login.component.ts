@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Usuario } from 'src/app/shared/models/usuario';
 import { HairduleService } from 'src/app/shared/service/hairdule.service';
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-login',
@@ -9,6 +10,14 @@ import { HairduleService } from 'src/app/shared/service/hairdule.service';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
+
+  mostrarSenha: boolean = false;
+  faEye = faEye;
+  faEyeSlash = faEyeSlash;
+
+  toggleMostrarSenha() {
+    this.mostrarSenha = !this.mostrarSenha;
+  }
 
   usuario: Usuario[] = [];
 
