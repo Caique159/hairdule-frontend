@@ -11,6 +11,7 @@ import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 })
 export class LoginComponent {
 
+  mensagem: string = '';
   mostrarSenha: boolean = false;
   faEye = faEye;
   faEyeSlash = faEyeSlash;
@@ -20,6 +21,7 @@ export class LoginComponent {
   }
 
   usuario: Usuario[] = [];
+
 
   loginForm = this.fb.group({
     idDoUsuario: [],
@@ -48,6 +50,7 @@ export class LoginComponent {
   }
 
   enviarCamposLogin() {
+    this.mensagem = '';
     if (this.loginForm.valid){
       const usuario = this.montarUsuario();
       console.log('usuario', usuario);
@@ -70,7 +73,16 @@ export class LoginComponent {
         }
       )
     }else {
-      alert("Falha ao efetuar login")
+      const usuario = this.montarUsuario();
+      if(!usuario.loginUsuario && !usuario.senhaUsuario){
+        this.mensagem = 'Campo usuario e senha não preenchidos';
+      }else{
+        if (!usuario.loginUsuario){
+          this.mensagem = 'Campo usuario não preenchido';
+      }else{
+        this.mensagem = 'Campo senha não preenchido';
+      }
+      }
     }
   }
 
