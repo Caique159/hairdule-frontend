@@ -24,12 +24,12 @@ export class LoginComponent {
 
 
   loginForm = this.fb.group({
-    idDoUsuario: [],
-    loginUsuario: [null, Validators.required],
-    senhaUsuario: [null, Validators.required],
-    tipoUsuario: [],
-    tipoAcessoFuncionarioUsuario: [],
-    chaveSegurancaUsuario: []
+    id_Do_Usuario: [],
+    login_Usuario: [null, Validators.required],
+    senha_Usuario: [null, Validators.required],
+    tipo_Usuario: [],
+    tipo_Acesso_Funcionario_Usuario: [],
+    chave_Seguranca_Usuario: []
   })
 
   constructor(
@@ -40,12 +40,12 @@ export class LoginComponent {
 
   montarUsuario(): Usuario {
     return{
-      idDoUsuario: this.loginForm.get('idDoUsuario')?.value ?? '',
-      loginUsuario: this.loginForm.get('loginUsuario')?.value ?? '',
-      senhaUsuario:  this.loginForm.get('senhaUsuario')?.value ?? '',
-      tipoUsuario: this.loginForm.get('tipoUsuario')?.value ?? '',
-      tipoAcessoFuncionarioUsuario: this.loginForm.get('tipoAcessoFuncionarioUsuario')?.value ?? '',
-      chaveSegurancaUsuario: this.loginForm.get('chaveSegurancaUsuario')?.value ?? '',
+      id_Do_Usuario: this.loginForm.get('id_Do_Usuario')?.value ?? '',
+      login_Usuario: this.loginForm.get('login_Usuario')?.value ?? '',
+      senha_Usuario:  this.loginForm.get('senha_Usuario')?.value ?? '',
+      tipo_Usuario: this.loginForm.get('tipo_Usuario')?.value ?? '',
+      tipo_Acesso_Funcionario_Usuario: this.loginForm.get('tipo_Acesso_Funcionario_Usuario')?.value ?? '',
+      chave_Seguranca_Usuario: this.loginForm.get('chave_Seguranca_Usuario')?.value ?? '',
     }
   }
 
@@ -61,23 +61,23 @@ export class LoginComponent {
           next: (res: any) => {
             if(res.length === 0){
               //res[0].idIdentificacaoUsuario
-              alert("Usuario ou senha invalidos")
+              this.mensagem = "Usuario ou senha invalidos"
             }else{
-              alert("Login com sucesso")
+              this.mensagem = "Login com sucesso"
             }
           },
           error: (error) => {
-            alert("Falha ao efetuar login")
+            this.mensagem = "Falha ao efetuar login"
             console.log(error)
           }
         }
       )
     }else {
       const usuario = this.montarUsuario();
-      if(!usuario.loginUsuario && !usuario.senhaUsuario){
+      if(!usuario.login_Usuario && !usuario.senha_Usuario){
         this.mensagem = 'Campo usuario e senha não preenchidos';
       }else{
-        if (!usuario.loginUsuario){
+        if (!usuario.login_Usuario){
           this.mensagem = 'Campo usuario não preenchido';
       }else{
         this.mensagem = 'Campo senha não preenchido';

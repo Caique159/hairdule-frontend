@@ -19,17 +19,18 @@
    <span class="preencher__login">
     <span class="preencher__login__card">
       <span class="formatacao__campos__login">
-        <input type="text" class="campo__usuario__login" placeholder="E-mail" formControlName="loginUsuario" >
+        <input type="text" class="campo__usuario__login" placeholder="E-mail" formControlName="login_Usuario" >
       </span>
         <hr class="Login__Dividir" size="1" align="center">
       <span class="formatacao__campos__login">
-        <input type="{{ mostrarSenha ? 'text' : 'password' }}" class="campo__senha__login" placeholder="Senha" formControlName="senhaUsuario">
+        <input type="{{ mostrarSenha ? 'text' : 'password' }}" class="campo__senha__login" placeholder="Senha" formControlName="senha_Usuario">
         <button class="botao__mostrar__senha" (click)="toggleMostrarSenha()">
           <i class="fas {{ mostrarSenha ? 'fa-eye-slash' : 'fa-eye' }}"></i>
         </button>
       </span>
     </span>
   </span>
+</form>
   <p class="mensagem__campos__invalidos">{{ mensagem }}</p>
   <section class="botoes__login">
     <div class="botao__cadastrese__entrar__login">
@@ -44,6 +45,6 @@
       <a class="botao__recuperar__senha__login"  routerLink="/recuperarSenha" >Recuperar Senha</a>
     </div>
   </section>
-  </form>
+
 </body>
 </html>

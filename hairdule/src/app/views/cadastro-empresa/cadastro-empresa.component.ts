@@ -15,11 +15,11 @@ export class CadastroEmpresa {
     private HairduleCadastroEmpresaService: HairduleCadastroEmpresaService
   ){
   }
+  mensagem: string = '';
 
   empresa: Empresa[] = [];
 
   empresaForm = this.fb.group({
-
     cnpj_empresa: [null, Validators.required],
     nome_fantasia_empresa: [null, Validators.required],
     razao_social_empresa: [null, Validators.required],
@@ -52,6 +52,7 @@ export class CadastroEmpresa {
   }
 
   enviarCamposCadastroEmpresa() {
+    this.mensagem = '';
     if (this.empresaForm.valid){
       const empresa = this.montarEmpresa();
       console.log('Empresa', empresa);
@@ -59,12 +60,12 @@ export class CadastroEmpresa {
       // verificar como nao passar a senha no post
       this.HairduleCadastroEmpresaService.enviarCamposCadastroEmpresa(empresa).subscribe(
         {
-          next: (res: any) => {
-            if(res.length === 0){
+          next: (res: String) => {
+            if(res === "Usuario cadastrado com sucesso"){
               //res[0].idIdentificacaoUsuario
-              alert("Dados Invalidos")
-            }else{
               alert("Cadastro Realizado com Sucesso")
+            }else{
+              alert("Dados invalidos")
             }
           },
           error: (error) => {
@@ -74,9 +75,8 @@ export class CadastroEmpresa {
         }
       )
     }else {
-      const empresa = this.montarEmpresa();
-      console.log('Empresa', empresa);
-      alert("Falha ao efetuar cadastro 2 ")
+      this.empresaForm.controls.email_empresa.markAllAsTouched();
+      alert("Dados Informados Invalidos")
     }
   }
 

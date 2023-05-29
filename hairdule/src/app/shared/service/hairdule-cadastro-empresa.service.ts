@@ -17,6 +17,6 @@ export class HairduleCadastroEmpresaService {
   constructor(private httpClient: HttpClient) { }
 
   enviarCamposCadastroEmpresa(empresa: Empresa) {
-    return this.httpClient.post<String>(this.apiUrl, empresa);
+    return this.httpClient.post(this.apiUrl, empresa, { responseType: 'text' });
   }
 }

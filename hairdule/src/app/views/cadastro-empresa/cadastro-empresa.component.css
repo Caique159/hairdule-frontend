@@ -260,3 +260,7 @@ hr.linha__divisoria__cadastroEmpresa{
   color: var(--cor-letras-preto);
   width: 170px;
 }
+
+.invalid {
+  background-color: red;
+}
