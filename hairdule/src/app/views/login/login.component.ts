@@ -3,6 +3,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { Usuario } from 'src/app/shared/models/usuario';
 import { HairduleService } from 'src/app/shared/service/hairduleLogin.service';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -34,7 +35,8 @@ export class LoginComponent {
 
   constructor(
     private fb: FormBuilder,
-    private HairduleService: HairduleService
+    private HairduleService: HairduleService,
+    private router: Router
   ){
   }
 
@@ -64,6 +66,7 @@ export class LoginComponent {
               this.mensagem = "Usuario ou senha invalidos"
             }else{
               this.mensagem = "Login com sucesso"
+              this.router.navigate(['/homeEmpresa']);
             }
           },
           error: (error) => {

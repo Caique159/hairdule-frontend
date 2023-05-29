@@ -17,6 +17,7 @@ import { CadastroEmpresa } from './views/cadastro-empresa/cadastro-empresa.compo
 import { RecuperarSenhaComponent } from './views/recuperar-senha/recuperar-senha.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { HomeBarbeiroComponent } from './views/home-Empresa/home-Empresa.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     LoginComponent,
     CadastroEmpresa,
-    RecuperarSenhaComponent
+    RecuperarSenhaComponent,
+    HomeBarbeiroComponent
   ],
   imports: [
     BrowserModule,
