@@ -14,65 +14,78 @@
      </div>
    </section>
 
+   <form [formGroup]="empresaForm">
    <span class="cadastroEmpresa__campos">
     <span class="cadastroEmpresa__card">
+
       <span class="formatacao__campos__cadastroEmpresa">
-        <input type="text" class="cnpj__cadastroEmpresa" placeholder="CNPJ">
+        <input type="text" class="email__cadastroEmpresa" placeholder="E-mail Empresa" formControlName="email_empresa">
       </span>
       <hr class="linha__divisoria__cadastroEmpresa" size="1" align="center">
 
       <span class="formatacao__campos__cadastroEmpresa">
-        <input type="text" class="nome__cadastroEmpresa" placeholder="Nome Empresa">
+        <input type="text" class="cnpj__cadastroEmpresa" placeholder="CNPJ" formControlName="cnpj_empresa">
       </span>
       <hr class="linha__divisoria__cadastroEmpresa" size="1" align="center">
 
       <span class="formatacao__campos__cadastroEmpresa">
-        <input type="text" class="telefone__cadastroEmpresa" placeholder="Telefone Empresa">
+        <input type="text" class="nome__cadastroEmpresa" placeholder="Nome Empresa" formControlName="nome_fantasia_empresa">
       </span>
       <hr class="linha__divisoria__cadastroEmpresa" size="1" align="center">
 
       <span class="formatacao__campos__cadastroEmpresa">
-        <input type="text" class="rua__cadastroEmpresa" placeholder="Rua Empresa">
+        <input type="text" class="razao__social__cadastroEmpresa" placeholder="Razao Social Empresa" formControlName="razao_social_empresa">
       </span>
       <hr class="linha__divisoria__cadastroEmpresa" size="1" align="center">
 
       <span class="formatacao__campos__cadastroEmpresa">
-        <input type="text" class="bairro__cadastroEmpresa" placeholder="Bairro Empresa">
+        <input type="text" class="telefone__cadastroEmpresa" placeholder="Telefone Empresa" formControlName="telefone_empresa">
       </span>
       <hr class="linha__divisoria__cadastroEmpresa" size="1" align="center">
 
       <span class="formatacao__campos__cadastroEmpresa">
-        <input type="text" class="estado__cadastroEmpresa" placeholder="Estado Empresa">
+        <input type="text" class="cep__cadastroEmpresa" placeholder="CEP Empresa" formControlName="cep_empresa">
       </span>
       <hr class="linha__divisoria__cadastroEmpresa" size="1" align="center">
 
       <span class="formatacao__campos__cadastroEmpresa">
-        <input type="text" class="numero__cadastroEmpresa" placeholder="Numero Empresa">
+        <input type="text" class="rua__cadastroEmpresa" placeholder="Rua Empresa" formControlName="rua_empresa">
       </span>
       <hr class="linha__divisoria__cadastroEmpresa" size="1" align="center">
 
       <span class="formatacao__campos__cadastroEmpresa">
-        <input type="text" class="email__cadastroEmpresa" placeholder="E-mail Empresa">
+        <input type="text" class="bairro__cadastroEmpresa" placeholder="Bairro Empresa" formControlName="bairro_empresa">
       </span>
       <hr class="linha__divisoria__cadastroEmpresa" size="1" align="center">
 
       <span class="formatacao__campos__cadastroEmpresa">
-        <input type="password" class="senha__cadastroEmpresa" placeholder="Senha">
+        <input type="text" class="estado__cadastroEmpresa" placeholder="Estado Empresa" formControlName="estado_empresa">
       </span>
       <hr class="linha__divisoria__cadastroEmpresa" size="1" align="center">
 
       <span class="formatacao__campos__cadastroEmpresa">
-        <input type="password" class="confirmacao__senha__cadastroEmpresa" placeholder="Confirme a senha">
+        <input type="text" class="numero__cadastroEmpresa" placeholder="Numero Empresa" formControlName="numero_endereco_empresa">
+      </span>
+      <hr class="linha__divisoria__cadastroEmpresa" size="1" align="center">
+
+      <span class="formatacao__campos__cadastroEmpresa">
+        <input type="password" class="senha__cadastroEmpresa" placeholder="Senha" formControlName="senha_empresa">
+      </span>
+      <hr class="linha__divisoria__cadastroEmpresa" size="1" align="center">
+
+      <span class="formatacao__campos__cadastroEmpresa">
+        <input type="password" class="confirmacao__senha__cadastroEmpresa" placeholder="Confirme a senha" formControlName="confirmacao_senha_empresa">
       </span>
     </span>
   </span>
+</form>
 
   <section class="botoes__cadastroEmpresa">
     <div class="botao__cadastrar__cancelar__cadastroEmpresa">
       <button class="botao__cancelar__cadastroEmpresa" routerLink="" mat-fab extended>
         Cancelar
       </button>
-      <button class="botao__cadastrar__cadastroEmpresa"  mat-fab extended>
+      <button class="botao__cadastrar__cadastroEmpresa"  mat-fab extended (click)="enviarCamposCadastroEmpresa()">
         Cadastrar
       </button>
     </div>

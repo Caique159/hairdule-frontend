@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Usuario } from 'src/app/shared/models/usuario';
-import { HairduleService } from 'src/app/shared/service/hairdule.service';
+import { HairduleService } from 'src/app/shared/service/hairduleLogin.service';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 
 @Component({

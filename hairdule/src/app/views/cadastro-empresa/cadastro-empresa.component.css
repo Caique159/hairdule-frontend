@@ -146,6 +146,32 @@ hr.linha__divisoria__cadastroEmpresa{
   margin-bottom: 10px;
 }
 
+.razao__social__cadastroEmpresa{
+  color: var(-cor-cinza-letras);
+  font-family: var(--fonte-principal);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.25rem;
+  border: 0;
+  width: 99%;
+  margin: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.cep__cadastroEmpresa{
+  color: var(-cor-cinza-letras);
+  font-family: var(--fonte-principal);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.25rem;
+  border: 0;
+  width: 99%;
+  margin: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .numero__cadastroEmpresa{
   color: var(-cor-cinza-letras);
   font-family: var(--fonte-principal);
