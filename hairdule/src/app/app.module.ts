@@ -18,6 +18,10 @@ import { RecuperarSenhaComponent } from './views/recuperar-senha/recuperar-senha
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeBarbeiroComponent } from './views/home-Empresa/home-Empresa.component';
+import { CadastroEmpresaCnpjComponent } from './views/cadastro-empresa/cadastro-empresa-cnpj/cadastro-empresa-cnpj.component';
+import { CadastroEmpresaEmailComponent } from './views/cadastro-empresa/cadastro-empresa-email/cadastro-empresa-email.component';
+import { CadastroEmpresaEnderecoComponent } from './views/cadastro-empresa/cadastro-empresa-endereco/cadastro-empresa-endereco.component';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +30,10 @@ import { HomeBarbeiroComponent } from './views/home-Empresa/home-Empresa.compone
     LoginComponent,
     CadastroEmpresa,
     RecuperarSenhaComponent,
-    HomeBarbeiroComponent
+    HomeBarbeiroComponent,
+    CadastroEmpresaCnpjComponent,
+    CadastroEmpresaEmailComponent,
+    CadastroEmpresaEnderecoComponent
   ],
   imports: [
     BrowserModule,

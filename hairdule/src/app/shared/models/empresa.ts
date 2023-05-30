@@ -1,14 +1,14 @@
 export interface Empresa {
-  email_empresa: String;
-  cnpj_empresa: String;
-  nome_fantasia_empresa: String;
-  razao_social_empresa: String;
-  telefone_empresa: String;
-  cep_empresa: String;
-  rua_empresa: String;
-  bairro_empresa: String;
-  estado_empresa: String;
-  numero_endereco_empresa: String;
-  senha_empresa: String;
-  confirmacao_senha_empresa: String;
+  email_cadastro_empresa: String;
+  cnpj_cadastro_empresa: String;
+  nome_fantasia_cadastro_empresa: String;
+  razao_social_cadastro_empresa: String;
+  telefone_cadastro_empresa: String;
+  cep_cadastro_empresa: String;
+  rua_cadastro_empresa: String;
+  bairro_cadastro_empresa: String;
+  estado_cadastro_empresa: String;
+  numero_endereco_cadastro_empresa: String;
+  senha_cadastro_empresa: String;
+  confirmacao_senha_cadastro_empresa: String;
 }

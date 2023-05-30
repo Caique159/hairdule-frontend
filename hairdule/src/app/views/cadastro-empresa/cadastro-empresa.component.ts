@@ -20,34 +20,34 @@ export class CadastroEmpresa {
   empresa: Empresa[] = [];
 
   empresaForm = this.fb.group({
-    cnpj_empresa: [null, Validators.required],
-    nome_fantasia_empresa: [null, Validators.required],
-    razao_social_empresa: [null, Validators.required],
-    email_empresa: [null, Validators.required],
-    telefone_empresa: [null, Validators.required],
-    cep_empresa: [null, Validators.required],
-    rua_empresa: [null, Validators.required],
-    bairro_empresa: [null, Validators.required],
-    estado_empresa: [null, Validators.required],
-    numero_endereco_empresa: [null, Validators.required],
-    senha_empresa: [null, Validators.required],
-    confirmacao_senha_empresa: [null, Validators.required]
+    cnpj_cadastro_empresa: [null, Validators.required],
+    nome_fantasia_cadastro_empresa: [null, Validators.required],
+    razao_social_cadastro_empresa: [null, Validators.required],
+    email_cadastro_empresa: [null, Validators.required],
+    telefone_cadastro_empresa: [null, Validators.required],
+    cep_cadastro_empresa: [null, Validators.required],
+    rua_cadastro_empresa: [null, Validators.required],
+    bairro_cadastro_empresa: [null, Validators.required],
+    estado_cadastro_empresa: [null, Validators.required],
+    numero_endereco_cadastro_empresa: [null, Validators.required],
+    senha_cadastro_empresa: [null, Validators.required],
+    confirmacao_senha_cadastro_empresa: [null, Validators.required]
   })
 
   montarEmpresa(): Empresa {
     return{
-      cnpj_empresa: this.empresaForm.get('cnpj_empresa')?.value ?? '',
-      nome_fantasia_empresa: this.empresaForm.get('nome_fantasia_empresa')?.value ?? '',
-      razao_social_empresa: this.empresaForm.get('razao_social_empresa')?.value ?? '',
-      email_empresa: this.empresaForm.get('email_empresa')?.value ?? '',
-      telefone_empresa: this.empresaForm.get('telefone_empresa')?.value ?? '',
-      cep_empresa: this.empresaForm.get('cep_empresa')?.value ?? '',
-      rua_empresa: this.empresaForm.get('rua_empresa')?.value ?? '',
-      bairro_empresa: this.empresaForm.get('bairro_empresa')?.value ?? '',
-      estado_empresa: this.empresaForm.get('estado_empresa')?.value ?? '',
-      numero_endereco_empresa: this.empresaForm.get('numero_endereco_empresa')?.value ?? '',
-      senha_empresa: this.empresaForm.get('senha_empresa')?.value ?? '',
-      confirmacao_senha_empresa: this.empresaForm.get('confirmacao_senha_empresa')?.value??''
+      cnpj_cadastro_empresa: this.empresaForm.get('cnpj_empresa')?.value ?? '',
+      nome_fantasia_cadastro_empresa: this.empresaForm.get('nome_fantasia_empresa')?.value ?? '',
+      razao_social_cadastro_empresa: this.empresaForm.get('razao_social_empresa')?.value ?? '',
+      email_cadastro_empresa: this.empresaForm.get('email_cadastro_empresa')?.value ?? '',
+      telefone_cadastro_empresa: this.empresaForm.get('telefone_empresa')?.value ?? '',
+      cep_cadastro_empresa: this.empresaForm.get('cep_empresa')?.value ?? '',
+      rua_cadastro_empresa: this.empresaForm.get('rua_empresa')?.value ?? '',
+      bairro_cadastro_empresa: this.empresaForm.get('bairro_empresa')?.value ?? '',
+      estado_cadastro_empresa: this.empresaForm.get('estado_empresa')?.value ?? '',
+      numero_endereco_cadastro_empresa: this.empresaForm.get('numero_endereco_empresa')?.value ?? '',
+      senha_cadastro_empresa: this.empresaForm.get('senha_empresa')?.value ?? '',
+      confirmacao_senha_cadastro_empresa: this.empresaForm.get('confirmacao_senha_empresa')?.value??''
     }
   }
 
@@ -75,7 +75,7 @@ export class CadastroEmpresa {
         }
       )
     }else {
-      this.empresaForm.controls.email_empresa.markAllAsTouched();
+      this.empresaForm.controls.email_cadastro_empresa.markAllAsTouched();
       alert("Dados Informados Invalidos")
     }
   }

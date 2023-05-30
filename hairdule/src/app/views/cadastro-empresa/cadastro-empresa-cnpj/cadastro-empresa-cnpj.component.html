@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <section class="lista__azul__cabecalho">
+    <div class="hairdule__cadastroEmpresaCnpj">
+       <span class="texto__CriarConta__cadastroEmpresaCnpj">Criar Conta</span>
+       <span class="texto__Vamosla__cadastroEmpresaCnpj">Estamos quase terminando !</span>
+     </div>
+   </section>
+
+  <form [formGroup]="empresaForm">
+    <span class="card__cadastroEmpresaCnpj">
+
+      <label class="label__cnpj__cadastroEmpresaCnpj">Qual é seu CPNJ ?</label>
+      <span class="formatacao__campos__cadastroEmpresaCnpj">
+        <input type="text" class="campo__cnpj__cadastroEmpresaCnpj" formControlName="cnpj_cadastro_empresa">
+      </span>
+
+      <label class="label__razao__social__cadastroEmpresaCnpj">Qual a razao social da sua empresa ?</label>
+      <span class="formatacao__campos__cadastroEmpresaCnpj">
+        <input type="text" class="campo__razao__social__cadastroEmpresaCnpj" formControlName="razao_social_cadastro_empresa">
+      </span>
+      <label class="label__nome__fantasia__cadastroEmpresaCnpj">Como gostaria que sua empresa fosse chamada ?</label>
+      <span class="formatacao__campos__cadastroEmpresaCnpj">
+        <input type="text" class="campo__nome__fantasia__cadastroEmpresaCnpj" formControlName="nome_fantasia_cadastro_empresa">
+      </span>
+
+      <label class="label__telefone__cadastroEmpresaCnpj">Qual telefone da sua empresa?</label>
+      <span class="formatacao__campos__cadastroEmpresaCnpj">
+        <input type="text" class="campo__telefone__cadastroEmpresaCnpj" formControlName="telefone_cadastro_empresa">
+      </span>
+    </span>
+  </form>
+
+
+  <p class="mensagem__campos__invalidos">{{ mensagem }}</p>
+
+  <section class="botoes__cadastroEmpresaCnpj">
+    <div class="botao__avancar__cancelar__cadastroEmpresaCnpj" >
+      <button class="botao__cancelar meu-botao"  mat-fab extended (click)="VoltarTelaAnterior()">
+        Voltar
+      </button>
+      <button class="botao__avancar meu-botao"  mat-fab extended (click)="ValidarCampoObrigatorio()" [disabled]="empresaForm.invalid">
+        Avançar
+      </button>
+    </div>
+  </section>
+
+</body>
+</html>
+
