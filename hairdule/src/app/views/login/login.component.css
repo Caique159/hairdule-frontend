@@ -42,7 +42,7 @@ body{
   align-items: center;
   margin-left: 10px;
   margin-right: 10px;
-  border-radius: 8px;
+  border-radius: 5px;
 }
 
 .label__usuario__login{
@@ -55,7 +55,7 @@ body{
   margin-top: 30px;
   margin-left: 10px;
   margin-right: 10px;
-  border-radius: 8px;
+  border-radius: 5px;
   background-color: var(--cor-fundo-pagina);
   color: var(--cor-cinza-letras);
   width: 100%;
@@ -67,10 +67,10 @@ body{
   justify-content: space-between;
   width: 100%;
   background-color: var(--cor-branco-cards);
-  border-radius: 8px;
+  border-radius: 5px;
   margin-left: 10px;
   margin-right: 10px;
-  border-radius: 8px;
+
 }
 
 .campo__usuario__login{
@@ -96,7 +96,7 @@ body{
   margin-top: 5px;
   margin-left: 10px;
   margin-right: 10px;
-  border-radius: 8px;
+  border-radius: 5px;
   background-color: var(--cor-fundo-pagina);
   color: var(--cor-cinza-letras);
   width: 100%;
@@ -129,7 +129,6 @@ body{
   margin-top: 30px;
   margin-left: 10px;
   margin-right: 10px;
-  border-radius: 8px;
 }
 
 .botao__cadastrese__entrar__login{
@@ -175,7 +174,7 @@ body{
   margin-top: 30px;
   margin-left: 25px;
   margin-right: 25px;
-  border-radius: 8px;
+  border-radius: 5px;
 }
 
 .botao__recuperar__senha__login{
