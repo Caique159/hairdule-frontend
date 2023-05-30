@@ -24,33 +24,41 @@ body{
 
 }
 
-.hairdule{
+.palavra__hairdule{
   font-style: normal;
   font-weight: 600;
   font-size: 36px;
   line-height: 22px;
 }
 
- .boas__vindas{
+ .frase__boas__vindas{
   font-size: 1.25rem;
   margin-top: 30px;
  }
 
-.preencher__login{
-  background-color: var(--cor-branco-cards);
-  margin-top: 10px;
-}
-
-.preencher__login__card{
+ .preencher__login__card{
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--cor-branco-cards);
+  margin-left: 10px;
+  margin-right: 10px;
   border-radius: 8px;
+}
+
+.label__usuario__login{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   margin-top: 30px;
   margin-left: 10px;
   margin-right: 10px;
   border-radius: 8px;
+  background-color: var(--cor-fundo-pagina);
+  color: var(--cor-cinza-letras);
+  width: 100%;
 }
 
 .formatacao__campos__login{
@@ -58,14 +66,18 @@ body{
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin-right: 3px;
+  background-color: var(--cor-branco-cards);
+  border-radius: 8px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 8px;
 }
 
 .campo__usuario__login{
-  color: var(--cor-cinza-letras);
+  color: var(--cor-letras-preto);
   font-family: var(--fonte-principal);
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.25rem;
   border: 0;
   width: 99%;
@@ -74,33 +86,39 @@ body{
   margin-bottom: 10px;
 }
 
-hr.Login__Dividir{
-  width: 95%;
-  background-color: var(--cor-cinza-letras);
+.label__senha__login{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 8px;
+  background-color: var(--cor-fundo-pagina);
+  color: var(--cor-cinza-letras);
+  width: 100%;
 }
 
 .campo__senha__login{
-  color: var(--cor-cinza-letras);
+  color: var(--cor-letras-preto);
   font-family: var(--fonte-principal);
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.25rem;
-  width: 99%;
   border: 0;
+  width: 99%;
   margin: 5px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-.botao__mostrar__senha{
-  background-color: var(--cor-branco-cards);
-  color: var(--cor-cinza-letras);
-  border: 0;
-  margin-right: 5px;
-  font-size: 18px;
-}
-
 .mensagem__campos__invalidos{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
   color: red;
   margin: 5px;
   margin-left: 10px;
@@ -118,6 +136,14 @@ hr.Login__Dividir{
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.botao__mostrar__senha{
+  background-color: var(--cor-branco-cards);
+  color: var(--cor-cinza-letras);
+  border: 0;
+  margin-right: 5px;
+  font-size: 18px;
 }
 
 .botao__cadastrese__login{

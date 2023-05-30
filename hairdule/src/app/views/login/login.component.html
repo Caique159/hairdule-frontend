@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,29 +9,33 @@
 </head>
 <body>
   <section class="lista__azul__cabecalho">
+
     <div class="hairdule__boasvindas">
-       <span class="hairdule">Hairdule</span>
-       <span class="boas__vindas">Boas-Vindas</span>
-     </div>
+      <span class="palavra__hairdule">Hairdule</span>
+      <span class="frase__boas__vindas">Boas-Vindas</span>
+      </div>
    </section>
 
    <form [formGroup]="loginForm">
-   <span class="preencher__login">
     <span class="preencher__login__card">
+      <label class="label__usuario__login">E-mail:</label>
       <span class="formatacao__campos__login">
-        <input type="text" class="campo__usuario__login" placeholder="E-mail" formControlName="login_Usuario" >
+        <input type="text" class="campo__usuario__login"  formControlName="login_Usuario" >
       </span>
-        <hr class="Login__Dividir" size="1" align="center">
+      <label class="label__senha__login">
+        Senha:
+      </label>
       <span class="formatacao__campos__login">
-        <input type="{{ mostrarSenha ? 'text' : 'password' }}" class="campo__senha__login" placeholder="Senha" formControlName="senha_Usuario">
+        <input type="{{ mostrarSenha ? 'text' : 'password' }}" class="campo__senha__login" formControlName="senha_Usuario">
         <button class="botao__mostrar__senha" (click)="toggleMostrarSenha()">
           <i class="fas {{ mostrarSenha ? 'fa-eye-slash' : 'fa-eye' }}"></i>
         </button>
-      </span>
+        </span>
     </span>
-  </span>
-</form>
+  </form>
+
   <p class="mensagem__campos__invalidos">{{ mensagem }}</p>
+
   <section class="botoes__login">
     <div class="botao__cadastrese__entrar__login">
       <button class="botao__cadastrese__login" routerLink="/cadastroEmpresa" mat-fab extended>
@@ -41,6 +45,7 @@
         Entrar
       </button>
     </div>
+
     <div class="recuperar__senha__login">
       <a class="botao__recuperar__senha__login"  routerLink="/recuperarSenha" >Recuperar Senha</a>
     </div>
