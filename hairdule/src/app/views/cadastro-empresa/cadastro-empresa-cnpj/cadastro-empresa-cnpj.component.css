@@ -181,13 +181,13 @@ body{
   margin-bottom: 10px;
 }
 
-.botao__avancar__cancelar__cadastroEmpresaCnpj{
+.botao__avancar__voltar__cadastroEmpresaCnpj{
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.botao__cancelar{
+.botao__voltar{
   font-family: 'Open Sans', sans-serif;
   font-style: normal;
   font-weight: 400;

@@ -20,7 +20,7 @@
 
       <label class="label__cnpj__cadastroEmpresaCnpj">Qual é seu CPNJ ?</label>
       <span class="formatacao__campos__cadastroEmpresaCnpj">
-        <input type="text" class="campo__cnpj__cadastroEmpresaCnpj" formControlName="cnpj_cadastro_empresa">
+        <input type="text" class="campo__cnpj__cadastroEmpresaCnpj" mask="00.000.000/0000-00" formControlName="cnpj_cadastro_empresa">
       </span>
 
       <label class="label__razao__social__cadastroEmpresaCnpj">Qual a razao social da sua empresa ?</label>
@@ -34,7 +34,7 @@
 
       <label class="label__telefone__cadastroEmpresaCnpj">Qual telefone da sua empresa?</label>
       <span class="formatacao__campos__cadastroEmpresaCnpj">
-        <input type="text" class="campo__telefone__cadastroEmpresaCnpj" formControlName="telefone_cadastro_empresa">
+        <input type="text" class="campo__telefone__cadastroEmpresaCnpj" mask="(00) 00000-0000" formControlName="telefone_cadastro_empresa">
       </span>
     </span>
   </form>
@@ -43,11 +43,11 @@
   <p class="mensagem__campos__invalidos">{{ mensagem }}</p>
 
   <section class="botoes__cadastroEmpresaCnpj">
-    <div class="botao__avancar__cancelar__cadastroEmpresaCnpj" >
-      <button class="botao__cancelar meu-botao"  mat-fab extended (click)="VoltarTelaAnterior()">
+    <div class="botao__avancar__voltar__cadastroEmpresaCnpj" >
+      <button class="botao__voltar"  mat-fab extended (click)="VoltarTelaAnterior()">
         Voltar
       </button>
-      <button class="botao__avancar meu-botao"  mat-fab extended (click)="ValidarCampoObrigatorio()" [disabled]="empresaForm.invalid">
+      <button class="botao__avancar"  mat-fab extended (click)="ValidarCampoObrigatorio()" [disabled]="empresaForm.invalid">
         Avançar
       </button>
     </div>

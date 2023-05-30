@@ -1,6 +1,5 @@
 import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -21,6 +20,8 @@ import { HomeBarbeiroComponent } from './views/home-Empresa/home-Empresa.compone
 import { CadastroEmpresaCnpjComponent } from './views/cadastro-empresa/cadastro-empresa-cnpj/cadastro-empresa-cnpj.component';
 import { CadastroEmpresaEmailComponent } from './views/cadastro-empresa/cadastro-empresa-email/cadastro-empresa-email.component';
 import { CadastroEmpresaEnderecoComponent } from './views/cadastro-empresa/cadastro-empresa-endereco/cadastro-empresa-endereco.component';
+import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
+
 
 
 @NgModule({
@@ -33,7 +34,7 @@ import { CadastroEmpresaEnderecoComponent } from './views/cadastro-empresa/cadas
     HomeBarbeiroComponent,
     CadastroEmpresaCnpjComponent,
     CadastroEmpresaEmailComponent,
-    CadastroEmpresaEnderecoComponent
+    CadastroEmpresaEnderecoComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,9 +54,12 @@ import { CadastroEmpresaEnderecoComponent } from './views/cadastro-empresa/cadas
     }),
     ReactiveFormsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgxMaskDirective,
+    NgxMaskPipe,
   ],
-  providers: [],
+
+  providers: [provideNgxMask()],
   bootstrap: [AppComponent]
 })
 export class AppModule {

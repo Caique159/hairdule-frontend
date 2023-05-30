@@ -13,7 +13,7 @@ body{
   color: var(--cor-letras-preto);
 }
 
-.hairdule__cadastroEmpresaCnpj {
+.hairdule__cadastroEmpresaEndereco {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,14 +21,14 @@ body{
   margin-top: 10px;
 }
 
-.texto__CriarConta__cadastroEmpresaCnpj{
+.texto__CriarConta__cadastroEmpresaEndereco{
   font-style: normal;
   font-weight: 600;
   font-size: 36px;
   line-height: 22px;
 }
 
-.texto__Vamosla__cadastroEmpresaCnpj{
+.texto__Vamosla__cadastroEmpresaEndereco{
   font-size: 1.25rem;
   margin-top: 30px;
   font-style: normal;
@@ -36,7 +36,7 @@ body{
   line-height: 20px;
 }
 
-.card__cadastroEmpresaCnpj{
+.card__cadastroEmpresaEndereco{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -45,7 +45,7 @@ body{
   border-radius: 8px;
 }
 
-.label__email__cadastroEmpresaCnpj{
+.label__cep__cadastroEmpresaEndereco{
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -61,7 +61,7 @@ body{
   width: 100%;
 }
 
-.formatacao__campos__cadastroEmpresaCnpj{
+.formatacao__campos__cadastroEmpresaEndereco{
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -73,7 +73,7 @@ body{
   border-radius: 5px;
 }
 
-.campo__email__cadastroEmpresaCnpj{
+.campo__cep__cadastroEmpresaEndereco{
   color: var(--cor-letras-preto);
   font-family: var(--fonte-principal);
   font-style: normal;
@@ -86,7 +86,123 @@ body{
   margin-bottom: 10px;
 }
 
-.botoes__cadastroEmpresaCnpj{
+.label__rua__cadastroEmpresaEndereco{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 8px;
+  background-color: var(--cor-fundo-pagina);
+  color: var(--cor-cinza-letras);
+  width: 100%;
+}
+
+.campo__rua__cadastroEmpresaEndereco{
+  color: var(--cor-letras-preto);
+  font-family: var(--fonte-principal);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.25rem;
+  border: 0;
+  width: 99%;
+  margin: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.label__bairro__cadastroEmpresaEndereco{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 8px;
+  background-color: var(--cor-fundo-pagina);
+  color: var(--cor-cinza-letras);
+  width: 100%;
+}
+
+.campo__bairro__cadastroEmpresaEndereco{
+  color: var(--cor-letras-preto);
+  font-family: var(--fonte-principal);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.25rem;
+  border: 0;
+  width: 99%;
+  margin: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.label__estado__cadastroEmpresaEndereco{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 8px;
+  background-color: var(--cor-fundo-pagina);
+  color: var(--cor-cinza-letras);
+  width: 100%;
+}
+
+.campo__estado__cadastroEmpresaEndereco{
+  color: var(--cor-letras-preto);
+  font-family: var(--fonte-principal);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.25rem;
+  border: 0;
+  width: 99%;
+  margin: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.label__numero__cadastroEmpresaEndereco{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 8px;
+  background-color: var(--cor-fundo-pagina);
+  color: var(--cor-cinza-letras);
+  width: 100%;
+}
+
+.campo__numero__cadastroEmpresaEndereco{
+  color: var(--cor-letras-preto);
+  font-family: var(--fonte-principal);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.25rem;
+  border: 0;
+  width: 99%;
+  margin: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.botoes__cadastroEmpresaEndereco{
   margin-top: 20px;
   margin-left: 10px;
   margin-right: 10px;
@@ -94,13 +210,13 @@ body{
   margin-bottom: 10px;
 }
 
-.botao__avancar__cancelar__cadastroEmpresaCnpj{
+.botao__avancar__voltar__cadastroEmpresaEndereco{
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.botao__cancelar{
+.botao__voltar{
   font-family: 'Open Sans', sans-serif;
   font-style: normal;
   font-weight: 400;

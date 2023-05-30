@@ -21,6 +21,20 @@
       <span class="formatacao__campos__cadastroEmpresaCnpj">
         <input type="text" class="campo__email__cadastroEmpresaCnpj" formControlName="email_cadastro_empresa">
       </span>
+      <label class="label__senha__cadastroEmpresaCnpj">Qual sua senha ?</label>
+      <span class="formatacao__campos__cadastroEmpresaCnpj">
+        <input type="{{ mostrarSenha ? 'text' : 'password' }}" class="campo__senha__cadastroEmpresaCnpj" formControlName="senha_cadastro_empresa">
+        <button class="botao__mostrar__senha" (click)="toggleMostrarSenha()">
+          <i class="fas {{ mostrarSenha ? 'fa-eye-slash' : 'fa-eye' }}"></i>
+        </button>
+      </span>
+      <label class="label__confirmar__senha__cadastroEmpresaCnpj">Confirme sua senha</label>
+      <span class="formatacao__campos__cadastroEmpresaCnpj">
+        <input type="{{ mostrarConfirmacaoSenha ? 'text' : 'password' }}" class="campo__confirmar__senha__cadastroEmpresaCnpj" formControlName="confirmacao_senha_cadastro_empresa">
+        <button class="botao__mostrar__confirmacao__senha" (click)="toggleMostrarConfirmacaoSenha()">
+          <i class="fas {{ mostrarConfirmacaoSenha ? 'fa-eye-slash' : 'fa-eye' }}"></i>
+        </button>
+      </span>
     </span>
   </form>
   <p class="mensagem__campos__invalidos">{{ mensagem }}</p>

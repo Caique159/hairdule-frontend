@@ -9,49 +9,49 @@
 <body>
 
   <section class="lista__azul__cabecalho">
-    <div class="hairdule__cadastroEmpresaCnpj">
-       <span class="texto__CriarConta__cadastroEmpresaCnpj">Criar Conta</span>
-       <span class="texto__Vamosla__cadastroEmpresaCnpj">Estamos na ultima etapa !</span>
+    <div class="hairdule__cadastroEmpresaEndereco">
+       <span class="texto__CriarConta__cadastroEmpresaEndereco">Criar Conta</span>
+       <span class="texto__Vamosla__cadastroEmpresaEndereco">Estamos na ultima etapa !</span>
      </div>
    </section>
 
   <form [formGroup]="empresaForm">
-    <span class="card__cadastroEmpresaCnpj">
-      <label class="label__email__cadastroEmpresaCnpj">Qual é CEP do estabelecimento?</label>
-      <span class="formatacao__campos__cadastroEmpresaCnpj">
-        <input type="text" class="campo__email__cadastroEmpresaCnpj" formControlName="email_cadastro_empresa">
+    <span class="card__cadastroEmpresaEndereco">
+      <label class="label__cep__cadastroEmpresaEndereco">Qual é CEP do estabelecimento?</label>
+      <span class="formatacao__campos__cadastroEmpresaEndereco">
+        <input type="text" class="campo__cep__cadastroEmpresaEndereco" mask="00000-00" formControlName="cep_cadastro_empresa">
       </span>
-      <label class="label__email__cadastroEmpresaCnpj">Qual a rua do estabelecimento?</label>
-      <span class="formatacao__campos__cadastroEmpresaCnpj">
-        <input type="text" class="campo__email__cadastroEmpresaCnpj" formControlName="email_cadastro_empresa">
+      <label class="label__rua__cadastroEmpresaEndereco">Qual a rua do estabelecimento?</label>
+      <span class="formatacao__campos__cadastroEmpresaEndereco">
+        <input type="text" class="campo__rua__cadastroEmpresaEndereco" formControlName="rua_cadastro_empresa">
       </span>
-      <label class="label__email__cadastroEmpresaCnpj">Qual é bairro do estabelecimento?</label>
-      <span class="formatacao__campos__cadastroEmpresaCnpj">
-        <input type="text" class="campo__email__cadastroEmpresaCnpj" formControlName="email_cadastro_empresa">
+      <label class="label__bairro__cadastroEmpresaEndereco">Qual é bairro do estabelecimento?</label>
+      <span class="formatacao__campos__cadastroEmpresaEndereco">
+        <input type="text" class="campo__bairro__cadastroEmpresaEndereco" formControlName="bairro_cadastro_empresa">
       </span>
-      <label class="label__email__cadastroEmpresaCnpj">Qual é estado do estabelecimento?</label>
-      <span class="formatacao__campos__cadastroEmpresaCnpj">
-        <input type="text" class="campo__email__cadastroEmpresaCnpj" formControlName="email_cadastro_empresa">
+      <label class="label__estado__cadastroEmpresaEndereco">Qual é estado do estabelecimento?</label>
+      <span class="formatacao__campos__cadastroEmpresaEndereco">
+        <input type="text" class="campo__estado__cadastroEmpresaEndereco" formControlName="estado_cadastro_empresa">
       </span>
-      <label class="label__email__cadastroEmpresaCnpj">Qual é numero do estabelecimento?</label>
-      <span class="formatacao__campos__cadastroEmpresaCnpj">
-        <input type="text" class="campo__email__cadastroEmpresaCnpj" formControlName="email_cadastro_empresa">
+      <label class="label__numero__cadastroEmpresaEndereco">Qual é numero do estabelecimento?</label>
+      <span class="formatacao__campos__cadastroEmpresaEndereco">
+        <input type="number" class="campo__numero__cadastroEmpresaEndereco" formControlName="numero_endereco_cadastro_empresa">
       </span>
     </span>
   </form>
+
   <p class="mensagem__campos__invalidos">{{ mensagem }}</p>
 
-  <section class="botoes__cadastroEmpresaCnpj">
-    <div class="botao__avancar__cancelar__cadastroEmpresaCnpj">
-      <button class="botao__cancelar" routerLink="" mat-fab extended>
-        Cancelar
+  <section class="botoes__cadastroEmpresaEndereco">
+    <div class="botao__avancar__voltar__cadastroEmpresaEndereco">
+      <button class="botao__voltar" mat-fab extended (click)="VoltarTelaAnterior()">
+        Voltar
       </button>
-      <button class="botao__avancar"  mat-fab extended (click)="ValidarCampoObrigatorio()" [disabled]="empresaForm.invalid">
+      <button class="botao__avancar"  mat-fab extended (click)="enviarCamposCadastroEmpresa()" >
         Avançar
       </button>
     </div>
   </section>
-
 </body>
 </html>
 

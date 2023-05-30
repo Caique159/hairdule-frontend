@@ -86,6 +86,91 @@ body{
   margin-bottom: 10px;
 }
 
+
+.label__senha__cadastroEmpresaCnpj{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 8px;
+  background-color: var(--cor-fundo-pagina);
+  color: var(--cor-cinza-letras);
+  width: 100%;
+}
+
+.campo__senha__cadastroEmpresaCnpj{
+  color: var(--cor-letras-preto);
+  font-family: var(--fonte-principal);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.25rem;
+  border: 0;
+  width: 99%;
+  margin: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.botao__mostrar__senha{
+  background-color: var(--cor-branco-cards);
+  color: var(--cor-cinza-letras);
+  border: 0;
+  margin-right: 5px;
+  font-size: 18px;
+}
+
+.label__confirmar__senha__cadastroEmpresaCnpj{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 8px;
+  background-color: var(--cor-fundo-pagina);
+  color: var(--cor-cinza-letras);
+  width: 100%;
+}
+
+.campo__confirmar__senha__cadastroEmpresaCnpj{
+  color: var(--cor-letras-preto);
+  font-family: var(--fonte-principal);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.25rem;
+  border: 0;
+  width: 99%;
+  margin: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.botao__mostrar__confirmacao__senha{
+  background-color: var(--cor-branco-cards);
+  color: var(--cor-cinza-letras);
+  border: 0;
+  margin-right: 5px;
+  font-size: 18px;
+}
+
+.mensagem__campos__invalidos{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  color: red;
+  margin: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 .botoes__cadastroEmpresaCnpj{
   margin-top: 20px;
   margin-left: 10px;
