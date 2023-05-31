@@ -2,6 +2,7 @@ import { Component, Inject } from '@angular/core';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Empresa } from 'src/app/shared/models/empresa';
+import { EnderecoService } from 'src/app/shared/service/apiCorrerios/apiCorrerios.service';
 import { HairduleCadastroEmpresaService } from 'src/app/shared/service/hairdule-cadastro-empresa.service';
 
 @Component({
@@ -39,6 +40,7 @@ export class CadastroEmpresaEnderecoComponent {
     private fb: FormBuilder,
     private HairduleCadastroEmpresaService: HairduleCadastroEmpresaService,
     private router: Router,
+    private enderecoService: EnderecoService
   ){
   }
 
@@ -54,6 +56,79 @@ export class CadastroEmpresaEnderecoComponent {
     numero_endereco_cadastro_empresa: ['', Validators.required],
   })
 
+  endereco: any;
+  buscarEndereco() {
+    this.enderecoService.buscarEndereco(this.empresaForm.get('cep_cadastro_empresa')?.value ?? '')
+      .subscribe((response: any) => {
+        this.endereco = response;
+        if (this.endereco.logradouro === null || this.endereco.logradouro === '' || this.endereco.logradouro === undefined){
+          this.empresaForm.patchValue({
+            rua_cadastro_empresa: '',
+            bairro_cadastro_empresa: '',
+            estado_cadastro_empresa: ''
+          });
+          this.habilitarCampos();
+          console.log(this.endereco);
+          this.mensagem = 'CEP não localizado';
+        }else {
+          this.empresaForm.patchValue({
+            rua_cadastro_empresa: this.endereco.logradouro,
+            bairro_cadastro_empresa: this.endereco.bairro,
+            estado_cadastro_empresa: this.endereco.localidade + ' - ' + this.endereco.uf
+          });
+
+          this.mensagem = '';
+          this.desabilitarCampos();
+          console.log(this.endereco);
+        }
+      },
+      error => {
+        this.empresaForm.patchValue({
+          rua_cadastro_empresa: '',
+          bairro_cadastro_empresa: '',
+          estado_cadastro_empresa: ''
+        });
+        this.habilitarCampos();
+        console.error(error);
+        this.mensagem = 'CEP não localizado';
+      });
+  }
+
+  desabilitarCampos() {
+    const ruaControl = this.empresaForm.get('rua_cadastro_empresa');
+    const bairroControl = this.empresaForm.get('bairro_cadastro_empresa');
+    const estadoControl = this.empresaForm.get('estado_cadastro_empresa');
+
+    if (ruaControl) {
+      ruaControl.disable();
+    }
+
+    if (bairroControl) {
+      bairroControl.disable();
+    }
+
+    if (estadoControl) {
+      estadoControl.disable();
+    }
+  }
+
+  habilitarCampos() {
+    const ruaControl = this.empresaForm.get('rua_cadastro_empresa');
+    const bairroControl = this.empresaForm.get('bairro_cadastro_empresa');
+    const estadoControl = this.empresaForm.get('estado_cadastro_empresa');
+
+    if (ruaControl) {
+      ruaControl.enable();
+    }
+
+    if (bairroControl) {
+      bairroControl.enable();
+    }
+
+    if (estadoControl) {
+      estadoControl.enable();
+    }
+  }
 
   montarEmpresa(): void{
 

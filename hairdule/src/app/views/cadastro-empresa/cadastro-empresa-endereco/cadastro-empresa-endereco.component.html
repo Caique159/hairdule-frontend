@@ -19,7 +19,7 @@
     <span class="card__cadastroEmpresaEndereco">
       <label class="label__cep__cadastroEmpresaEndereco">Qual é CEP do estabelecimento?</label>
       <span class="formatacao__campos__cadastroEmpresaEndereco">
-        <input type="text" class="campo__cep__cadastroEmpresaEndereco" mask="00000-00" formControlName="cep_cadastro_empresa">
+        <input type="text" class="campo__cep__cadastroEmpresaEndereco" mask="00000-000" (blur)="buscarEndereco()" formControlName="cep_cadastro_empresa">
       </span>
       <label class="label__rua__cadastroEmpresaEndereco">Qual a rua do estabelecimento?</label>
       <span class="formatacao__campos__cadastroEmpresaEndereco">
