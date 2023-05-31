@@ -166,7 +166,9 @@ export class CadastroEmpresaEnderecoComponent {
           next: (res: String) => {
             if(res === "Usuario cadastrado com sucesso"){
               //res[0].idIdentificacaoUsuario
+              this.router.navigate(['/homeEmpresa']);
               alert("Cadastro Realizado com Sucesso")
+
             }else{
               alert("Dados invalidos")
             }
