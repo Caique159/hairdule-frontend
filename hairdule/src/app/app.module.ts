@@ -12,7 +12,6 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import { ServiceWorkerModule } from '@angular/service-worker';
-import { CadastroEmpresa } from './views/cadastro-empresa/cadastro-empresa.component';
 import { RecuperarSenhaComponent } from './views/recuperar-senha/recuperar-senha.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -29,7 +28,6 @@ import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
     AppComponent,
     HomeComponent,
     LoginComponent,
-    CadastroEmpresa,
     RecuperarSenhaComponent,
     HomeBarbeiroComponent,
     CadastroEmpresaCnpjComponent,
