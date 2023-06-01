@@ -15,21 +15,23 @@
      </div>
    </section>
 
-  <span class="recuperaSenha__card">
-    <label class="label__usuario__recuperarSenha">E-mail:</label>
-    <span class="formatacao__campos__recuperaSenha">
-      <input type="text" class="campo__email__recuperarSenha">
+   <form [formGroup]="recuperarSenhaForm">
+    <span class="recuperaSenha__card">
+      <label class="label__usuario__recuperarSenha">E-mail:</label>
+      <span class="formatacao__campos__recuperaSenha">
+        <input type="text" class="campo__email__recuperarSenha" (focus)="limparMensagem()"   (blur)="verificarUsuarioValido()" #inputElement (input)="onCaractereInformado(inputElement.value)" formControlName="login_Usuario">
+      </span>
     </span>
-  </span>
+   </form>
 
   <p class="mensagem__campos__invalidos">{{ mensagem }}</p>
 
   <section class="botoes__recuperarSenha">
     <div class="botao__recuperar__cancelar__recuperarSenha">
-      <button class="botao__cancelar" routerLink="" mat-fab extended>
+      <button class="botao__cancelar" (click)="voltarPagina()" mat-fab extended>
         Cancelar
       </button>
-      <button class="botao__recuperar"  mat-fab extended>
+      <button class="botao__recuperar"  mat-fab extended (click)="enviarRecuperarSenha()" [disabled]="botaoDesabilitado || recuperarSenhaForm.invalid">
         Recuperar
       </button>
     </div>

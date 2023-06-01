@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Usuario } from 'src/app/shared/models/usuario';
-import { HairduleService } from 'src/app/shared/service/hairduleLogin.service';
+import { HairduleLoginService } from 'src/app/shared/service/hairduleLogin.service';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import { Router } from '@angular/router';
 import { AutenticacaoService } from 'src/app/shared/service/autenticacao/autenticacao.service';
@@ -36,7 +36,7 @@ export class LoginComponent {
 
   constructor(
     private fb: FormBuilder,
-    private HairduleService: HairduleService,
+    private HairduleLoginService: HairduleLoginService,
     private router: Router,
     private autenticar: AutenticacaoService
   ){
@@ -60,7 +60,7 @@ export class LoginComponent {
       console.log('usuario', usuario);
 
       // verificar como nao passar a senha no post
-      this.HairduleService.enviarCamposLogin(usuario).subscribe(
+      this.HairduleLoginService.enviarCamposLogin(usuario).subscribe(
         {
           next: (res: any) => {
             if(res.length === 0){

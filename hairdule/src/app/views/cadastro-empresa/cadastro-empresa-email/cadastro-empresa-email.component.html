@@ -19,7 +19,7 @@
     <span class="card__cadastroEmpresaCnpj">
       <label class="label__email__cadastroEmpresaCnpj">Qual é seu E-mail ?</label>
       <span class="formatacao__campos__cadastroEmpresaCnpj">
-        <input type="text" class="campo__email__cadastroEmpresaCnpj"  (blur)="verificarEmailValido()" formControlName="email_cadastro_empresa">
+        <input type="text" class="campo__email__cadastroEmpresaCnpj" (focus)="limparMensagem()" (blur)="verificarUsuarioValido()" #inputElement (input)="onCaractereInformado(inputElement.value)" formControlName="email_cadastro_empresa">
       </span>
       <label class="label__senha__cadastroEmpresaCnpj">Qual sua senha ?</label>
       <span class="formatacao__campos__cadastroEmpresaCnpj">
@@ -37,14 +37,14 @@
       </span>
     </span>
   </form>
-  <p class="mensagem__campos__invalidos">{{ mensagem }}</p>
+  <p [class.mensagem__campos__invalidos]="true" [class.mensagem-piscante]="exibirMensagemPiscante">{{ mensagem }}</p>
 
   <section class="botoes__cadastroEmpresaCnpj">
     <div class="botao__avancar__cancelar__cadastroEmpresaCnpj">
       <button class="botao__cancelar" (click)="ValidarCancelar()" mat-fab extended>
         Cancelar
       </button>
-      <button class="botao__avancar"  mat-fab extended (click)="ValidarCampoObrigatorio()" [disabled]="empresaForm.invalid">
+      <button class="botao__avancar"  mat-fab extended (click)="ValidarCampoObrigatorio()" [disabled]="botaoDesabilitado ||empresaForm.invalid">
         Avançar
       </button>
     </div>

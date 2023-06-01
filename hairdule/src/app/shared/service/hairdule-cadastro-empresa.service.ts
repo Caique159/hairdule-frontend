@@ -1,12 +1,13 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable, Inject } from '@angular/core';
 import { Empresa } from '../models/empresa';
+import { Usuario } from '../models/usuario';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HairduleCadastroEmpresaService {
-  apiUrl = 'http://localhost:8080/hairdule/cadastrar/empresa';
+  apiUrlCadastrar = 'http://localhost:8080/hairdule/cadastrar/empresa';
 
   httpOptions = {
     headers: new HttpHeaders({
@@ -19,7 +20,7 @@ export class HairduleCadastroEmpresaService {
   }
 
   enviarCamposCadastroEmpresa(empresa: Empresa) {
-    return this.httpClient.post(this.apiUrl, empresa, { responseType: 'text' });
+    return this.httpClient.post(this.apiUrlCadastrar, empresa, { responseType: 'text' });
   }
 
   private minhaEmpresa: Empresa = {
@@ -60,6 +61,23 @@ export class HairduleCadastroEmpresaService {
     this.minhaEmpresa.bairro_cadastro_empresa = empresaRecebida.bairro_cadastro_empresa
     this.minhaEmpresa.estado_cadastro_empresa = empresaRecebida.estado_cadastro_empresa
     this.minhaEmpresa.numero_endereco_cadastro_empresa = empresaRecebida.numero_endereco_cadastro_empresa
+  }
+
+  private validarEmail = false;
+
+  validar() {
+    // Lógica de autenticação
+    this.validarEmail = true;
+  }
+
+  naoValidar() {
+    // Lógica de logout
+    this.validarEmail = false;
+  }
+
+  verificarSeEstaValidado(): boolean {
+    return this.validarEmail;
+
   }
 
 }

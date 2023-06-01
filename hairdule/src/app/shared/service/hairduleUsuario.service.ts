@@ -5,9 +5,9 @@ import { Usuario } from '../models/usuario';
 @Injectable({
   providedIn: 'root'
 })
-export class HairduleLoginService {
+export class HairduleUsuarioService {
 
-  apiUrl = 'http://localhost:8080/hairdule/usuario/login';
+  apiUrlVerificarUsuarioExiste = 'http://localhost:8080/hairdule/usuario/verificarUsuarioExistente';
 
   httpOptions = {
     headers: new HttpHeaders({
@@ -17,8 +17,8 @@ export class HairduleLoginService {
 
   constructor(private httpClient: HttpClient) { }
 
-  enviarCamposLogin(usuario: Usuario) {
-    return this.httpClient.post<Usuario>(this.apiUrl, usuario);
+  verificaSeUsuarioJaCadastrado(login_usuario: Usuario) {
+    return this.httpClient.post(this.apiUrlVerificarUsuarioExiste, login_usuario, { responseType: 'text' });
   }
 
 }

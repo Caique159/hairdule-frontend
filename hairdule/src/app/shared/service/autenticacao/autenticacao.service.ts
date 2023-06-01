@@ -1,6 +1,4 @@
 import { Injectable } from '@angular/core';
-import { HairduleService } from '../hairduleLogin.service';
-import { Usuario } from '../../models/usuario';
 
 @Injectable({
   providedIn: 'root'
