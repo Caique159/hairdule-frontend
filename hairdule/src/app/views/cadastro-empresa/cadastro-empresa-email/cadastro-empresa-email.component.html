@@ -19,8 +19,9 @@
     <span class="card__cadastroEmpresaCnpj">
       <label class="label__email__cadastroEmpresaCnpj">Qual é seu E-mail ?</label>
       <span class="formatacao__campos__cadastroEmpresaCnpj">
-        <input type="text" class="campo__email__cadastroEmpresaCnpj" (focus)="limparMensagem()" (blur)="verificarUsuarioValido()" #inputElement (input)="onCaractereInformado(inputElement.value)" formControlName="email_cadastro_empresa">
+        <input type="text" class="campo__email__cadastroEmpresaCnpj" (focus)="limparMensagemEmail()" (blur)="verificarUsuarioValido()" #inputElement (input)="onCaractereInformado(inputElement.value)" formControlName="email_cadastro_empresa">
       </span>
+      <p [class.mensagem__campos__invalidos]="true" [class.mensagem-piscante]="exibirMensagemPiscante">{{ mensagemEmail }}</p>
       <label class="label__senha__cadastroEmpresaCnpj">Qual sua senha ?</label>
       <span class="formatacao__campos__cadastroEmpresaCnpj">
         <input type="{{ mostrarSenha ? 'text' : 'password' }}" class="campo__senha__cadastroEmpresaCnpj"  (blur)="verificarSenhasIguais()" formControlName="senha_cadastro_empresa">
@@ -30,14 +31,15 @@
       </span>
       <label class="label__confirmar__senha__cadastroEmpresaCnpj">Confirme sua senha</label>
       <span class="formatacao__campos__cadastroEmpresaCnpj">
-        <input type="{{ mostrarConfirmacaoSenha ? 'text' : 'password' }}" class="campo__confirmar__senha__cadastroEmpresaCnpj"  (blur)="verificarSenhasIguaisConfirmar()" formControlName="confirmacao_senha_cadastro_empresa">
+        <input type="{{ mostrarConfirmacaoSenha ? 'text' : 'password' }}" class="campo__confirmar__senha__cadastroEmpresaCnpj" (focus)="limparMensagemSenha()"  (blur)="verificarSenhasIguaisConfirmar()" #inputElement (input)="onCaractereInformadoSenha(inputElement.value)" formControlName="confirmacao_senha_cadastro_empresa">
         <button class="botao__mostrar__confirmacao__senha" (click)="toggleMostrarConfirmacaoSenha()">
           <i class="fas {{ mostrarConfirmacaoSenha ? 'fa-eye-slash' : 'fa-eye' }}"></i>
         </button>
       </span>
+      <p [class.mensagem__campos__invalidos]="true" [class.mensagem-piscante]="exibirMensagemPiscante">{{ mensagemSenha }}</p>
     </span>
   </form>
-  <p [class.mensagem__campos__invalidos]="true" [class.mensagem-piscante]="exibirMensagemPiscante">{{ mensagem }}</p>
+  <p [class.mensagem__campos__invalidos]="true" [class.mensagem-piscante]="exibirMensagemPiscante">{{ mensagemGeral }}</p>
 
   <section class="botoes__cadastroEmpresaCnpj">
     <div class="botao__avancar__cancelar__cadastroEmpresaCnpj">

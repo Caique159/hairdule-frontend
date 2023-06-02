@@ -39,7 +39,7 @@ export class RecuperarSenhaComponent {
   }
 
   verificarUsuarioValido(){
-    if(this.hairduleRecuperarSenhaService.verificarSeEstaValidado() === false){
+    if(this.hairduleRecuperarSenhaService.verificarSeEstaValidado() === false || this.mensagem === ''){
       this.verificarEmailValido();
       this.hairduleRecuperarSenhaService.validar()
     }
@@ -73,7 +73,7 @@ export class RecuperarSenhaComponent {
               this.botaoDesabilitado = false
             }else{
               this.botaoDesabilitado = true
-              this.mensagem = "E-mail nao encontrado";
+              this.mensagem = "E-mail não cadastrado";
             }
           },
           error: (error) => {
@@ -97,7 +97,9 @@ export class RecuperarSenhaComponent {
             const respostaValida = "Senha do usuario " + usuario.login_Usuario +" foi recuperada com sucesso"
             if(res === respostaValida){
               this.hairduleRecuperarSenhaService.naoValidar()
-              this.mensagem = "Senha Recuperada Com Sucesso"
+              this.hairduleRecuperarSenhaService.senhaRecuperada()
+              this.hairduleRecuperarSenhaService.incluirEmailEnviado(this.recuperarSenhaForm.get('login_Usuario')?.value ?? '',);
+              this.router.navigate(['/mensagemUsuario']);
             }else{
               this.mensagem = "Erro ao recuperar senha"
             }

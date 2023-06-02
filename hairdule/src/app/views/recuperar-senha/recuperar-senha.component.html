@@ -21,12 +21,11 @@
       <span class="formatacao__campos__recuperaSenha">
         <input type="text" class="campo__email__recuperarSenha" (focus)="limparMensagem()"   (blur)="verificarUsuarioValido()" #inputElement (input)="onCaractereInformado(inputElement.value)" formControlName="login_Usuario">
       </span>
+      <p class="mensagem__campos__invalidos">{{ mensagem }}</p>
     </span>
    </form>
 
-  <p class="mensagem__campos__invalidos">{{ mensagem }}</p>
-
-  <section class="botoes__recuperarSenha">
+    <section class="botoes__recuperarSenha">
     <div class="botao__recuperar__cancelar__recuperarSenha">
       <button class="botao__cancelar" (click)="voltarPagina()" mat-fab extended>
         Cancelar

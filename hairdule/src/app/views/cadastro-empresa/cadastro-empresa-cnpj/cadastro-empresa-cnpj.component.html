@@ -10,18 +10,19 @@
 
   <section class="lista__azul__cabecalho">
     <div class="hairdule__cadastroEmpresaCnpj">
-       <span class="texto__CriarConta__cadastroEmpresaCnpj">Criar Conta</span>
-       <span class="texto__Vamosla__cadastroEmpresaCnpj">Estamos quase terminando !</span>
-     </div>
-   </section>
+      <span class="texto__CriarConta__cadastroEmpresaCnpj">Criar Conta</span>
+      <span class="texto__Vamosla__cadastroEmpresaCnpj">Estamos quase terminando !</span>
+    </div>
+  </section>
 
   <form [formGroup]="empresaForm">
     <span class="card__cadastroEmpresaCnpj">
 
       <label class="label__cnpj__cadastroEmpresaCnpj">Qual é seu CPNJ ?</label>
       <span class="formatacao__campos__cadastroEmpresaCnpj">
-        <input type="text" class="campo__cnpj__cadastroEmpresaCnpj" mask="00.000.000/0000-00" formControlName="cnpj_cadastro_empresa">
+        <input type="text" class="campo__cnpj__cadastroEmpresaCnpj" mask="00.000.000/0000-00" (blur)="verificarCampoCNPJZerado()" #inputElement (input)="onCNPJCaractereInformado(inputElement.value)" formControlName="cnpj_cadastro_empresa">
       </span>
+      <p [class.mensagem__campos__invalidos]="true" [class.mensagem-piscante]="exibirMensagemPiscante">{{ mensagemCnpj }}</p>
 
       <label class="label__razao__social__cadastroEmpresaCnpj">Qual a razao social da sua empresa ?</label>
       <span class="formatacao__campos__cadastroEmpresaCnpj">
@@ -34,25 +35,23 @@
 
       <label class="label__telefone__cadastroEmpresaCnpj">Qual telefone da sua empresa?</label>
       <span class="formatacao__campos__cadastroEmpresaCnpj">
-        <input type="text" class="campo__telefone__cadastroEmpresaCnpj" mask="(00) 00000-0000" formControlName="telefone_cadastro_empresa">
+        <input type="text" class="campo__telefone__cadastroEmpresaCnpj" mask="(00) 00000-0000" (blur)="verificarCampoTelefoneZerado()" #inputElement (input)="onTelefoneCaractereInformado(inputElement.value)" formControlName="telefone_cadastro_empresa">
       </span>
+      <p [class.mensagem__campos__invalidos]="true" [class.mensagem-piscante]="exibirMensagemPiscante">{{ mensagemTelefone }}</p>
     </span>
   </form>
-
-
-  <p class="mensagem__campos__invalidos">{{ mensagem }}</p>
+  <p [class.mensagem__campos__invalidos]="true" [class.mensagem-piscante]="exibirMensagemPiscante">{{ mensagemGeral }}</p>
 
   <section class="botoes__cadastroEmpresaCnpj">
     <div class="botao__avancar__voltar__cadastroEmpresaCnpj" >
       <button class="botao__voltar"  mat-fab extended (click)="VoltarTelaAnterior()">
         Voltar
       </button>
-      <button class="botao__avancar"  mat-fab extended (click)="ValidarCampoObrigatorio()" [disabled]="empresaForm.invalid">
+      <button class="botao__avancar"  mat-fab extended (click)="ValidarCampoObrigatorio()" [disabled]="botaoDesabilitado ||empresaForm.invalid">
         Avançar
       </button>
     </div>
   </section>
-
 </body>
 </html>
 

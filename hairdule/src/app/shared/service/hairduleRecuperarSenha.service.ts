@@ -24,6 +24,37 @@ export class HairduleRecuperarSenhaService {
 
   }
 
+  private mensagemSenhaRecuperada = false;
+
+  senhaRecuperada() {
+    // Lógica de autenticação
+    this.mensagemSenhaRecuperada = true;
+  }
+
+  senhaNaoRecuperada() {
+    // Lógica de logout
+    this.mensagemSenhaRecuperada = false;
+  }
+
+  verificarSeMensagemSenhaRecuperada(): boolean {
+    return this.mensagemSenhaRecuperada;
+  }
+
+  private emailEnviado = '';
+
+  incluirEmailEnviado(email: string ) {
+    this.emailEnviado = email;
+  }
+
+  recuperarEmailEnviado() {
+    // Lógica de autenticação
+    return this.emailEnviado;
+  }
+
+  limparEmailEnviado() {
+    this.emailEnviado = '';
+  }
+
   apiUrl = 'http://localhost:8080/hairdule/recuperarSenha';
 
   httpOptions = {

@@ -64,6 +64,7 @@ export class HairduleCadastroEmpresaService {
   }
 
   private validarEmail = false;
+  private validarSenha = false;
 
   validar() {
     // Lógica de autenticação
@@ -78,6 +79,37 @@ export class HairduleCadastroEmpresaService {
   verificarSeEstaValidado(): boolean {
     return this.validarEmail;
 
+  }
+
+  validarSenhasiguais() {
+    // Lógica de autenticação
+    this.validarSenha = true;
+  }
+
+  naoValidarSenhaIguais() {
+    // Lógica de logout
+    this.validarSenha = false;
+  }
+
+  verificarSeEstaValidadoSenhaIguais(): boolean {
+    return this.validarSenha;
+
+  }
+
+  private mensagemCadastradoComSucesso = false;
+
+  CadastradoComSucesso() {
+    // Lógica de autenticação
+    this.mensagemCadastradoComSucesso = true;
+  }
+
+  naoFoiCadastradoComSucesso() {
+    // Lógica de logout
+    this.mensagemCadastradoComSucesso = false;
+  }
+
+  verificarCadastradoComSucesso(): boolean {
+    return this.mensagemCadastradoComSucesso;
   }
 
 }

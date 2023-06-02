@@ -93,7 +93,7 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 10px;
+  margin-top: 0px;
   margin-left: 10px;
   margin-right: 10px;
   border-radius: 8px;
@@ -174,11 +174,10 @@ body{
 }
 
 .botoes__cadastroEmpresaCnpj{
-  margin-top: 20px;
+  margin-top: 0px;
   margin-left: 10px;
   margin-right: 10px;
   border-radius: 8px;
-  margin-bottom: 10px;
 }
 
 .botao__avancar__voltar__cadastroEmpresaCnpj{
@@ -208,4 +207,27 @@ body{
   color: var(--cor-letras-preto);
   width: 170px;
   border-radius: 100px;
+}
+
+@keyframes blink-animation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.mensagem-piscante {
+  animation: blink-animation 0.5s infinite;
+}
+
+.mensagem__campos__invalidos{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  color: red;
+  width: 100%;
 }

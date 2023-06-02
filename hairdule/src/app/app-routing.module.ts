@@ -7,6 +7,7 @@ import { AuthGuard } from './shared/service/autenticacao/AuthGuard.service';
 import { CadastroEmpresaEmailComponent } from './views/cadastro-empresa/cadastro-empresa-email/cadastro-empresa-email.component';
 import { CadastroEmpresaCnpjComponent } from './views/cadastro-empresa/cadastro-empresa-cnpj/cadastro-empresa-cnpj.component';
 import { CadastroEmpresaEnderecoComponent } from './views/cadastro-empresa/cadastro-empresa-endereco/cadastro-empresa-endereco.component';
+import { MensagemPadraoCadastroRecuperarSenhaComponent } from './views/mensagem/mensagem-padrao-cadastro-recuperar-senha/mensagem-padrao-cadastro-recuperar-senha.component';
 
 RecuperarSenhaComponent
 
@@ -35,7 +36,11 @@ const routes: Routes = [
     path: 'homeEmpresa',
     component: HomeBarbeiroComponent,
     canActivate: [AuthGuard]
-  }
+  },
+  {
+    path: 'mensagemUsuario',
+    component: MensagemPadraoCadastroRecuperarSenhaComponent
+  },
 ];
 
 @NgModule({

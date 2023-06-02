@@ -20,6 +20,7 @@ import { CadastroEmpresaCnpjComponent } from './views/cadastro-empresa/cadastro-
 import { CadastroEmpresaEmailComponent } from './views/cadastro-empresa/cadastro-empresa-email/cadastro-empresa-email.component';
 import { CadastroEmpresaEnderecoComponent } from './views/cadastro-empresa/cadastro-empresa-endereco/cadastro-empresa-endereco.component';
 import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
+import { MensagemPadraoCadastroRecuperarSenhaComponent } from './views/mensagem/mensagem-padrao-cadastro-recuperar-senha/mensagem-padrao-cadastro-recuperar-senha.component';
 
 
 
@@ -33,6 +34,7 @@ import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
     CadastroEmpresaCnpjComponent,
     CadastroEmpresaEmailComponent,
     CadastroEmpresaEnderecoComponent,
+    MensagemPadraoCadastroRecuperarSenhaComponent,
   ],
   imports: [
     BrowserModule,

@@ -127,3 +127,11 @@ body{
   width: 170px;
 }
 
+.mensagem__campos__invalidos{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  color: red;
+  width: 100%;
+}
+

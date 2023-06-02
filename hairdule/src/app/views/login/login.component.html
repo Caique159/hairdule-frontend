@@ -20,13 +20,13 @@
     <span class="preencher__login__card">
       <label class="label__usuario__login">E-mail:</label>
       <span class="formatacao__campos__login">
-        <input type="text" class="campo__usuario__login"  formControlName="login_Usuario" >
+        <input type="text" class="campo__usuario__login"  (focus)="limparMensagem()" (blur)="verificarUsuarioValido()" #inputElement (input)="onCaractereInformado(inputElement.value)" formControlName="login_Usuario" >
       </span>
       <label class="label__senha__login">
         Senha:
       </label>
       <span class="formatacao__campos__login">
-        <input type="{{ mostrarSenha ? 'text' : 'password' }}" class="campo__senha__login" formControlName="senha_Usuario">
+        <input type="{{ mostrarSenha ? 'text' : 'password' }}" class="campo__senha__login"  formControlName="senha_Usuario">
         <button class="botao__mostrar__senha" (click)="toggleMostrarSenha()">
           <i class="fas {{ mostrarSenha ? 'fa-eye-slash' : 'fa-eye' }}"></i>
         </button>
@@ -41,7 +41,7 @@
       <button class="botao__cadastrese__login" routerLink="/cadastroEmailEmpresa" mat-fab extended>
         Cadastre-se
       </button>
-      <button class="botao__entrar__login" mat-fab extended (click)="enviarCamposLogin()">
+      <button class="botao__entrar__login" mat-fab extended (click)="enviarCamposLogin()" [disabled]="botaoDesabilitado || loginForm.invalid">
         Entrar
       </button>
     </div>
