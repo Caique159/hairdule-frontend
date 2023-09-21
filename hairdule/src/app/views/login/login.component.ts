@@ -5,6 +5,8 @@ import { HairduleLoginService } from 'src/app/shared/service/hairduleLogin.servi
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import { Router } from '@angular/router';
 import { AutenticacaoService } from 'src/app/shared/service/autenticacao/autenticacao.service';
+import { Empresa } from 'src/app/shared/models/empresa';
+import { HairduleConsultaDadosEmpresasService } from 'src/app/shared/service/hairdule-consulta-dados-empresas.service';
 
 @Component({
   selector: 'app-login',
@@ -18,6 +20,8 @@ export class LoginComponent {
   faEye = faEye;
   faEyeSlash = faEyeSlash;
   botaoDesabilitado: boolean = false;
+  dadosUsuario: any;
+  campoParaPassar: any;
 
   toggleMostrarSenha() {
     this.mostrarSenha = !this.mostrarSenha;
@@ -41,6 +45,7 @@ export class LoginComponent {
   constructor(
     private fb: FormBuilder,
     private HairduleLoginService: HairduleLoginService,
+    private HairduleConsultaDadosEmpresas: HairduleConsultaDadosEmpresasService,
     private router: Router,
     private autenticar: AutenticacaoService
   ){
@@ -54,6 +59,24 @@ export class LoginComponent {
       tipo_Usuario: this.loginForm.get('tipo_Usuario')?.value ?? '',
       tipo_Acesso_Funcionario_Usuario: this.loginForm.get('tipo_Acesso_Funcionario_Usuario')?.value ?? '',
       chave_Seguranca_Usuario: this.loginForm.get('chave_Seguranca_Usuario')?.value ?? '',
+    }
+  }
+
+  montarEmpresa(idIdentificacaoUsuario: any): Empresa{
+    return {
+      idIdentificacaoUsuario: idIdentificacaoUsuario,
+      cnpj_cadastro_empresa: '',
+      nome_fantasia_cadastro_empresa: '',
+      razao_social_cadastro_empresa: '',
+      telefone_cadastro_empresa: '',
+      cep_cadastro_empresa: '',
+      rua_cadastro_empresa: '',
+      bairro_cadastro_empresa: '',
+      estado_cadastro_empresa: '',
+      numero_endereco_cadastro_empresa: '',
+      email_cadastro_empresa: '',
+      senha_cadastro_empresa: '',
+      confirmacao_senha_cadastro_empresa: '',
     }
   }
 
@@ -95,7 +118,7 @@ export class LoginComponent {
         console.log('usuario', usuario);
 
       // verificar como nao passar a senha no post
-        this.HairduleLoginService.enviarCamposLogin(usuario).subscribe(
+         this.HairduleLoginService.enviarCamposLogin(usuario).subscribe(
           {
             next: (res: any) => {
               if(res.length === 0){
@@ -104,8 +127,28 @@ export class LoginComponent {
               }else{
                 this.autenticar.login()
                 console.log(this.autenticar.verificarSeEstaLogado)
-                this.mensagem = "Login com sucesso"
-                this.router.navigate(['/homeEmpresa']);
+                if(res[0].tipoUsuario == "CLIENTE"){
+                  console.log("Id do usuario: " + res[0].tipoUsuario)
+                  this.router.navigate(['/homeEmpresa']);
+                  this.mensagem = "Login com sucesso"
+                }if (res[0].tipoUsuario == "EMPRESA") {
+                  console.log("Id do empresa: " + res[0].tipoUsuario)
+                  const empresa = this.montarEmpresa(res[0].idIdentificacaoUsuario);
+                  this.HairduleConsultaDadosEmpresas.consultarEmpresa(empresa).subscribe(
+                    {
+                      next: (res1: any) => {
+                        this.campoParaPassar = res1.nomeFantasiaEmpresa
+                        console.log("Retorno: " + this.campoParaPassar)
+                        this.router.navigate(['/homeEmpresa'], { queryParams: { campoExemplo: this.campoParaPassar } });
+                        this.mensagem = "Login com sucesso"
+                      }
+                    }
+                  )
+                } else {
+                  this.router.navigate(['/homeEmpresa']);
+                  console.log("Id do funcionario: " + res[0].tipoUsuario)
+                  this.mensagem = "Login com sucesso"
+                }
               }
             },
             error: (error) => {

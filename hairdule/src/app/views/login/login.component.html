@@ -20,34 +20,34 @@
     <span class="preencher__login__card">
       <label class="label__usuario__login">E-mail:</label>
       <span class="formatacao__campos__login">
-        <input type="text" class="campo__usuario__login"  (focus)="limparMensagem()" (blur)="verificarUsuarioValido()" #inputElement (input)="onCaractereInformado(inputElement.value)" formControlName="login_Usuario" >
+        <input type="text" id='campo_login_TelaLogar' class="campo__usuario__login"  (focus)="limparMensagem()" (blur)="verificarUsuarioValido()" #inputElement (input)="onCaractereInformado(inputElement.value)" formControlName="login_Usuario" >
       </span>
       <label class="label__senha__login">
         Senha:
       </label>
       <span class="formatacao__campos__login">
-        <input type="{{ mostrarSenha ? 'text' : 'password' }}" class="campo__senha__login"  formControlName="senha_Usuario">
-        <button class="botao__mostrar__senha" (click)="toggleMostrarSenha()">
+        <input type="{{ mostrarSenha ? 'text' : 'password' }}" class="campo__senha__login" id="campo_senha_TelaLogar" formControlName="senha_Usuario">
+        <button class="botao__mostrar__senha" id='botao_mostra_senha' (click)="toggleMostrarSenha()">
           <i class="fas {{ mostrarSenha ? 'fa-eye-slash' : 'fa-eye' }}"></i>
         </button>
         </span>
     </span>
   </form>
 
-  <p class="mensagem__campos__invalidos">{{ mensagem }}</p>
+  <p id ="mensagem_TelaLogar" class="mensagem__campos__invalidos">{{ mensagem }}</p>
 
   <section class="botoes__login">
     <div class="botao__cadastrese__entrar__login">
-      <button class="botao__cadastrese__login" routerLink="/cadastroEmailEmpresa" mat-fab extended>
+      <button class="botao__cadastrese__login" id="botao_cadastrese_TelaLogar" routerLink="/cadastroEmailEmpresa" mat-fab extended>
         Cadastre-se
       </button>
-      <button class="botao__entrar__login" mat-fab extended (click)="enviarCamposLogin()" [disabled]="botaoDesabilitado || loginForm.invalid">
+      <button class="botao__entrar__login" id="botao_entrar_TelaLogar" mat-fab extended (click)="enviarCamposLogin()" [disabled]="botaoDesabilitado || loginForm.invalid">
         Entrar
       </button>
     </div>
 
     <div class="recuperar__senha__login">
-      <a class="botao__recuperar__senha__login"  routerLink="/recuperarSenha" >Recuperar Senha</a>
+      <a class="botao__recuperar__senha__login" id="botao_recuperarSenha_TelaLogar" routerLink="/recuperarSenha" >Recuperar Senha</a>
     </div>
   </section>
 

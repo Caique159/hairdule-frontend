@@ -25,6 +25,7 @@ export class CadastroEmpresaEmailComponent {
   mostrarConfirmacaoSenha: boolean = false;
   faEye = faEye;
   faEyeSlash = faEyeSlash;
+
   duracaoAnimacao: number = 1000;
   botaoDesabilitado: boolean = false;
 
@@ -59,7 +60,7 @@ export class CadastroEmpresaEmailComponent {
   }
 
   toggleMostrarConfirmacaoSenha() {
-    this.mostrarConfirmacaoSenha = !this.mostrarSenha;
+    this.mostrarConfirmacaoSenha = !this.mostrarConfirmacaoSenha;
   }
 
   empresaForm = this.fb.group({
@@ -70,6 +71,7 @@ export class CadastroEmpresaEmailComponent {
 
   montarEmpresa(): void {
     const minhaEmpresa: Empresa = {
+      idIdentificacaoUsuario:'',
       cnpj_cadastro_empresa: '',
       nome_fantasia_cadastro_empresa: '',
       razao_social_cadastro_empresa: '',

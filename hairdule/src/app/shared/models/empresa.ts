@@ -1,4 +1,5 @@
 export interface Empresa {
+  idIdentificacaoUsuario:string;
   email_cadastro_empresa: string ;
   cnpj_cadastro_empresa: string;
   nome_fantasia_cadastro_empresa: string;

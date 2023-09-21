@@ -7,7 +7,7 @@ import { Usuario } from '../models/usuario';
   providedIn: 'root'
 })
 export class HairduleCadastroEmpresaService {
-  apiUrlCadastrar = 'http://localhost:8080/hairdule/cadastrar/empresa';
+  apiUrlCadastrar = 'http://localhost:8080/hairdule/empresa/cadastrar';
 
   httpOptions = {
     headers: new HttpHeaders({
@@ -24,6 +24,7 @@ export class HairduleCadastroEmpresaService {
   }
 
   private minhaEmpresa: Empresa = {
+    idIdentificacaoUsuario:'',
     cnpj_cadastro_empresa:  '',
     nome_fantasia_cadastro_empresa:  '',
     razao_social_cadastro_empresa:  '',

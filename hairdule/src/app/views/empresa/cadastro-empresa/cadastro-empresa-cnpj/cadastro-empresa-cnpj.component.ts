@@ -121,7 +121,7 @@ export class CadastroEmpresaCnpjComponent {
   montarEmpresa(): void{
 
     const minhaEmpresa: Empresa = {
-
+      idIdentificacaoUsuario: '',
       cnpj_cadastro_empresa: this.empresaForm.get('cnpj_cadastro_empresa')?.value ?? '',
       nome_fantasia_cadastro_empresa: this.empresaForm.get('nome_fantasia_cadastro_empresa')?.value ?? '',
       razao_social_cadastro_empresa: this.empresaForm.get('razao_social_cadastro_empresa')?.value ?? '',

@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './views/login/login.component';
 import { RecuperarSenhaComponent } from './views/recuperar-senha/recuperar-senha.component';
-import { HomeBarbeiroComponent } from './views/home-Empresa/home-Empresa.component';
+import { HomeBarbeiroComponent } from './views/empresa/home-Empresa/home-Empresa.component';
 import { AuthGuard } from './shared/service/autenticacao/AuthGuard.service';
-import { CadastroEmpresaEmailComponent } from './views/cadastro-empresa/cadastro-empresa-email/cadastro-empresa-email.component';
-import { CadastroEmpresaCnpjComponent } from './views/cadastro-empresa/cadastro-empresa-cnpj/cadastro-empresa-cnpj.component';
-import { CadastroEmpresaEnderecoComponent } from './views/cadastro-empresa/cadastro-empresa-endereco/cadastro-empresa-endereco.component';
+import { CadastroEmpresaEmailComponent } from './views/empresa/cadastro-empresa/cadastro-empresa-email/cadastro-empresa-email.component';
+import { CadastroEmpresaCnpjComponent } from './views//empresa/cadastro-empresa/cadastro-empresa-cnpj/cadastro-empresa-cnpj.component';
+import { CadastroEmpresaEnderecoComponent } from './views/empresa/cadastro-empresa/cadastro-empresa-endereco/cadastro-empresa-endereco.component';
 import { MensagemPadraoCadastroRecuperarSenhaComponent } from './views/mensagem/mensagem-padrao-cadastro-recuperar-senha/mensagem-padrao-cadastro-recuperar-senha.component';
 
 RecuperarSenhaComponent

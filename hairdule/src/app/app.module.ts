@@ -15,10 +15,10 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { RecuperarSenhaComponent } from './views/recuperar-senha/recuperar-senha.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { HomeBarbeiroComponent } from './views/home-Empresa/home-Empresa.component';
-import { CadastroEmpresaCnpjComponent } from './views/cadastro-empresa/cadastro-empresa-cnpj/cadastro-empresa-cnpj.component';
-import { CadastroEmpresaEmailComponent } from './views/cadastro-empresa/cadastro-empresa-email/cadastro-empresa-email.component';
-import { CadastroEmpresaEnderecoComponent } from './views/cadastro-empresa/cadastro-empresa-endereco/cadastro-empresa-endereco.component';
+import { HomeBarbeiroComponent } from './views/empresa/home-Empresa/home-Empresa.component';
+import { CadastroEmpresaCnpjComponent } from './views/empresa/cadastro-empresa/cadastro-empresa-cnpj/cadastro-empresa-cnpj.component';
+import { CadastroEmpresaEmailComponent } from './views/empresa/cadastro-empresa/cadastro-empresa-email/cadastro-empresa-email.component';
+import { CadastroEmpresaEnderecoComponent } from './views/empresa/cadastro-empresa/cadastro-empresa-endereco/cadastro-empresa-endereco.component';
 import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
 import { MensagemPadraoCadastroRecuperarSenhaComponent } from './views/mensagem/mensagem-padrao-cadastro-recuperar-senha/mensagem-padrao-cadastro-recuperar-senha.component';
 

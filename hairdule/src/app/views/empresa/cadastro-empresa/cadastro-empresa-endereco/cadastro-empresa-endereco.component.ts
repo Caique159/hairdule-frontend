@@ -133,7 +133,7 @@ export class CadastroEmpresaEnderecoComponent {
   montarEmpresa(): void{
 
     const minhaEmpresa: Empresa = {
-
+      idIdentificacaoUsuario:'',
       cnpj_cadastro_empresa: '',
       nome_fantasia_cadastro_empresa: '',
       razao_social_cadastro_empresa: '',
@@ -164,7 +164,7 @@ export class CadastroEmpresaEnderecoComponent {
       this.HairduleCadastroEmpresaService.enviarCamposCadastroEmpresa(empresa).subscribe(
         {
           next: (res: String) => {
-            if(res === "Usuario cadastrado com sucesso"){
+            if(res === "Empresa cadastrado com sucesso"){
               //res[0].idIdentificacaoUsuario
               this.HairduleCadastroEmpresaService.CadastradoComSucesso()
               this.router.navigate(['/mensagemUsuario']);
